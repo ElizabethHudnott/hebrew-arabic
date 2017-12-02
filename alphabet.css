@@ -1,0 +1,333 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	clear: left;
+}
+
+.alphabet {
+	font-family: "Times New Roman", serif;
+	font-size: 0pt;
+}
+
+.alphabet>div {
+	border: 1px dashed #d6d6d6;
+	display: inline-block;
+	font-size: 32px;
+	text-align: center;
+	vertical-align: middle;
+	width: 48px;
+}
+
+.alphabet>div.double-width {
+	width: 98px;
+}
+
+.alphabet .label {
+	border-width: 0px;
+	font-size: 16pt;
+}
+
+.order {
+	font-size: 0pt;
+}
+
+.order div {
+	display: inline-block;
+	font-size: 12pt;
+	padding-left: 1px;
+	padding-right: 1px;
+	text-align: center;
+	width: 48px;
+}
+
+.alphabet .label, .order .label {
+	margin-left: 8px;
+	width: fit-content;
+}
+
+.arabic {
+	color: #70cc70;
+}
+
+.thick {
+	text-decoration: underline;
+	text-decoration-color: #70cc70;
+}
+
+.hebrew {
+	color: #aaaaff;
+}
+
+div.no-left-border {
+	border-left-width: 0px;
+	padding-left: 1px;
+}
+
+div.no-right-border {
+	border-right-width: 0px;
+	padding-right: 1px;
+}
+
+div.arial, span.arial {
+	font-size: 27px;
+	padding-top: 5px;
+}
+
+.waw {
+	font-stretch: ultra-condensed;
+	letter-spacing: -3px;
+	padding-bottom: 1px;
+}
+
+.borderless div {
+	border-width: 0px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+div.box {
+	border-width: 1px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.overprint {
+	margin-left: -12px;
+}
+
+#soft-transliteration>div {
+	vertical-align: top;
+}
+
+#za-alt, #sin, #soft-tav-trans-alt {
+	display: none;
+}
+
+#faa {
+	border-bottom: 1px dashed #d6d6d6;
+	display: none;
+}
+
+#soft-tav-trans-alt {
+	float: left;
+}
+
+.info {
+	background-color: #444444;
+	color: white;
+	padding: 5px;
+}
+
+.float {
+	float: left;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex>* {
+	max-width: 960px;
+}
+
+
+table {
+	border-collapse: collapse;
+	margin: 1em;
+}
+
+.table td, .table th {
+	border: 1px solid #444444;
+	padding: 3px;
+	text-align: center;
+}
+
+.table .arabic-char {
+	font-size: 300%;
+}
+
+.table .hebrew-char {
+	font-size: 260%;
+}
+
+.table .english-char {
+	font-size: 150%;
+}
+
+.table .thick-border {
+	border-right-width: 3px;
+}
+
+.info, .table, p, ol, ul {
+	line-height: 1.5;	
+}
+
+p, ol, ul {
+	text-align: justify;
+}
+
+.footnotes {
+	font-family: serif;
+	line-height: 1.4;
+}
+
+li {
+	margin-bottom: 1em;
+}
+
+.big {
+	font-size: 180%;
+	line-height: 0.7;
+}
+
+.long {
+	text-decoration: overline;
+}
+
+.input {
+	font-size: 250%;
+	text-align: right;
+}
+
+.transliteration {
+	font-size: 175%;
+}
+
+.pronunciation {
+	color: gray;
+	font-size: 130%;
+}
+
+.english {
+	font-size: 24px;
+	font-style: italic;
+}
+
+.diacritic {
+	font-size: 12px;
+	vertical-align: +20px;
+}
+
+.rule {
+	font-style: italic;
+}
+
+.english::before, .rule::before {
+	content: '-';
+}
+
+.english::after, .rule::after {
+	content: '-';
+}
+
+.arabic-only .thick, .arabic-only.thick {
+	font-weight: bold;
+	text-decoration-color: inherit;
+}
+
+.common-container {
+	display: flex;
+	align-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.common {
+	display: inline-block;
+	font-size: 32px;
+	line-height: 0.8;
+	padding-top: 6px;
+	text-align: center;
+}
+
+td th {
+	vertical-align: top;
+}
+
+.no-copy-undertie::before {
+	content: '\203f';
+}
+
+.invisible {
+	font-size: 0pt;
+}
+
+#controls {
+	text-align: center;
+}
+
+body {
+	counter-reset: section figure;
+}
+
+section h1::before {
+	counter-increment: section;
+	content: counter(section) " ";
+}
+
+h1 {
+	counter-reset: subsection footnote;
+}
+
+h2::before {
+	counter-increment: subsection;
+	content: counter(section) "." counter(subsection) " ";
+}
+
+h2 {
+	counter-reset: footnote;
+}
+
+.footnote::before, .footnote-duplicate {
+	font-size: small;
+	margin-left: 3px;
+	vertical-align: 12px;
+}
+
+.footnote::before {
+	counter-increment: footnote;
+	content: counter(footnote);
+}
+
+figure {
+	width: fit-content;
+}
+
+figcaption::before {
+	counter-increment: figure;
+	content: "Figure " counter(figure) ": ";
+	font-weight: bold;
+}
+
+figcaption {
+	font-size: small;
+	margin-top: 1em;
+	text-align: center;
+}
+
+.xref::before {
+	content: "link";
+}
+
+.emchar {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.pronunciation-note {
+	font-size: initial;
+	font-style: italic;
+}
+
+.combo {
+	position: relative;
+}
+
+.combo  .over {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
