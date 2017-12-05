@@ -292,6 +292,10 @@ h2 {
 	content: counter(footnote);
 }
 
+.footnote+.footnote::before {
+	content: ", " counter(footnote);
+}
+
 figure {
 	width: fit-content;
 }
@@ -313,8 +317,8 @@ figcaption {
 }
 
 .emchar {
+	color: #222222;
 	font-weight: bold;
-	font-style: italic;
 }
 
 .pronunciation-note {
@@ -330,4 +334,8 @@ figcaption {
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+.vowel-chart a {
+	text-decoration: none;
 }
