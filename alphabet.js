@@ -4,6 +4,7 @@ $('.dagesh').each(function (index, element) {
 
 $('.color1').css('background-color', 'DarkOrange');
 $('.color2').css('background-color', '#ea4335');
+$('.color2a').css('background', 'linear-gradient(135deg, rgb(234, 67, 53), transparent 60%)');
 $('.color3').css('background-color', '#4488f4');
 $('.color4').css('background-color', '#33a855');
 
