@@ -60,16 +60,6 @@ h1 {
 	color: #aaaaff;
 }
 
-div.no-left-border {
-	border-left-width: 0px;
-	padding-left: 1px;
-}
-
-div.no-right-border {
-	border-right-width: 0px;
-	padding-right: 1px;
-}
-
 div.arial, span.arial {
 	font-size: 27px;
 	padding-top: 5px;
@@ -174,8 +164,20 @@ p, ol, ul {
 	line-height: 1.4;
 }
 
+.footnotes table {
+	font-family: sans-serif;
+}
+
+ol.footnotes, ul.footnotes {
+	padding-left: 40px;
+}
+
+p.footnotes {
+	padding-left: 25px;
+}
+
 li {
-	margin-bottom: 1em;
+	margin-top: 1em;
 }
 
 .big {
@@ -338,4 +340,29 @@ figcaption {
 
 .vowel-chart a {
 	text-decoration: none;
+}
+
+.reduced {
+	font-size: 98%;
+	vertical-align: bottom;
+}
+
+div.no-lb, table .no-lb, .no-lb {
+	border-left-color: transparent;
+}
+
+div.no-rb, table .no-rb, .no-rb {
+	border-right-color: transparent;
+}
+
+table .no-tb, .no-tb {
+	border-top-color: transparent;
+}
+
+table .no-bb, .no-bb {
+	border-bottom-color: transparent;
+}
+
+table .no-b, .no-b {
+	border-color: transparent;
 }
