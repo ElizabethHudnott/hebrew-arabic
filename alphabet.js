@@ -20,6 +20,7 @@ $('.make-arabic').addClass('arabic');
 
 $('#soft-tav-trans-alt').show();
 $('#soft-tav-trans').css('float', 'right');
+$('#soft-transliteration .arabic').parent().addClass('raphe');
 
 $('#za').hide();
 $('#za-alt').show();

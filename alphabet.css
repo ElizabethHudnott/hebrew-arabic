@@ -60,7 +60,13 @@ h1 {
 	color: #aaaaff;
 }
 
+.raphe {
+	text-decoration: overline;
+	text-decoration-color: #aaaaff;
+}
+
 div.arial, span.arial {
+	font-family: Arial, sans-serif;
 	font-size: 27px;
 	padding-top: 5px;
 }
