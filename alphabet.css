@@ -236,6 +236,14 @@ li {
 	text-decoration-color: inherit;
 }
 
+.english-char.arabic-only .thick, .english-char .arabic-only.thick {
+	font-weight: inherit;
+}
+
+.hebrew-only .raphe, .hebrew-only.raphe {
+	text-decoration-color: black;
+}
+
 .common-container {
 	display: flex;
 	align-content: flex-start;
