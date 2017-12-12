@@ -1,0 +1,47 @@
+.vocab {
+	margin-left: 90px;
+}
+
+.vocab td.english-char:nth-child(2) {
+	text-align: right;
+}
+
+.vocab td.english-char {
+	text-align: center;
+}
+
+.vocab td.english-char:last-child {
+	text-align: left;
+}
+
+.vocab .english-char {
+	font-size: 200%;
+}
+
+.vocab .arabic-char, .vocab .hebrew-char {
+	padding-right: 15px;
+	text-align: right;
+}
+
+.vocab .english-char {
+	padding-left: 0px;
+}
+
+.vocab .thick {
+	text-decoration-color: inherit;
+}
+
+.vocab .digraph {
+	display: inline-block;
+	letter-spacing: -2px;
+	transform: scale(0.8, 1) translate(-35%);
+	width: 0.6em;
+}
+
+.tsere-trans {
+	font-style: italic;
+}
+
+.vocab .english-char .ayin {
+	vertical-align: +2px;
+}

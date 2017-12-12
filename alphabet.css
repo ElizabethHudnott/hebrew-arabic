@@ -141,15 +141,15 @@ table {
 	text-align: center;
 }
 
-.table .arabic-char {
+.arabic-char {
 	font-size: 300%;
 }
 
-.table .hebrew-char {
+.hebrew-char {
 	font-size: 260%;
 }
 
-.table .english-char {
+.english-char {
 	font-size: 150%;
 }
 
@@ -379,4 +379,13 @@ table .no-bb, .no-bb {
 
 table .no-b, .no-b {
 	border-color: transparent;
+}
+
+.root .thick {
+	text-decoration-color: inherit;
+}
+
+.ayin {
+	font-family: serif;
+	font-variant: small-caps;
 }
