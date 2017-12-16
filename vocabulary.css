@@ -1,17 +1,27 @@
-.vocab {
-	margin-left: 90px;
+.vocab, .meaning {
+	margin-left: 85px;
 }
 
-.vocab td.english-char:nth-child(2) {
+.meaning th {
 	text-align: right;
+	vertical-align: bottom;
+	width: 110px;
 }
 
 .vocab td.english-char {
 	text-align: center;
 }
 
+.vocab td.english-char:last-child {
+	text-align: left;
+}
+
 .align-left {
 	text-align: left !important;
+}
+
+.align-right {
+	text-align: right !important;	
 }
 
 .vocab .english-char {
@@ -21,6 +31,7 @@
 .vocab .arabic-char, .vocab .hebrew-char {
 	padding-right: 15px;
 	text-align: right;
+	width: 110px;
 }
 
 .vocab .english-char {

@@ -191,8 +191,8 @@ li {
 	line-height: 0.7;
 }
 
-h1 .big {
-	font-size: 140%;
+h2 .big {
+	font-size: 135%;
 }
 
 .long {
@@ -292,7 +292,7 @@ h1 {
 	counter-reset: subsection footnote;
 }
 
-h2::before {
+section h2::before {
 	counter-increment: subsection;
 	content: counter(section) "." counter(subsection) " ";
 }
