@@ -12,7 +12,7 @@ both.set('S', '<span class="thick">s</span>');
 both.set('D', '<span class="thick">d</span>');
 both.set('DH', '<span class="digraph thick">dh</span>');
 both.set('sh', '<span class="digraph">sh</span>');
-both.set('th', '<span class="digraph">th</span>');
+both.set('th', '<span class="digraph" style="width: 0.5em">th</span>');
 both.set('E', '<span class="thin-e">e</span>');
 both.set('e.', '<span class="thin-e">e&#x306;</span>');
 both.set('eh', '<span class="tsere-trans">eh</span>');
@@ -20,13 +20,17 @@ both.set('OO', '<span class="long">-o-</span>');
 
 both.set('v', 'b');
 both.set('g-', both.get('gh'));
-both.set('d-', both.get('dh'));
+both.set('d-', 'd');
+both.set('D-', both.get('dh'));
 both.set('t-', both.get('th'));
 both.set('j', 'g');
 both.set('ts', both.get('S'));
 both.set('-', '.');
 
-function transcribeBoth(transcription) {
+var hebrewOverrides = new Map();
+hebrewOverrides.set('q', 'q');
+
+function transcribeBoth(language, transcription) {
 	var output = '';
 	var startOfSyllable = true;
 	for (let i = 0; i < transcription.length; i++) {
@@ -43,7 +47,13 @@ function transcribeBoth(transcription) {
 		output = output + '">';
 
 		for (let phone of items) {
-			var html = both.get(phone);
+			var html = undefined;
+			if (language == 'hebrew') {
+				html = hebrewOverrides.get(phone);
+			}
+			if (html === undefined) {
+				html = both.get(phone);
+			}
 			if (html === undefined) {
 				html = phone;
 			}
@@ -55,8 +65,102 @@ function transcribeBoth(transcription) {
 	return output;
 }
 
-$('tr[data-transcribe]').each(function (index, element) {
-	var jqElem = $(element);
-	var cells = transcribeBoth(JSON.parse('[' + element.dataset.transcribe + ']'))
-	jqElem.append(cells);
-});
+function transcribePage() {
+	$('tr[data-transcribe]').each(function (index, element) {
+		var jqElem = $(element);
+		var word = jqElem.children().eq(0);
+		word.detach();
+		var language;
+		if (word.hasClass('hebrew-char')) {
+			language = 'hebrew';
+		} else {
+			language = 'arabic'
+		}
+		jqElem.html('');
+		jqElem.append(word);
+		var phones = JSON.parse('[' + element.dataset.transcribe + ']');
+		var cells = transcribeBoth(language, phones)
+		jqElem.append(cells);
+	});
+}
+
+/* Options implemented:
+ *		vet, gimel, jim, gimelWithoutDagesh, dhalet, tawWithoutDagesh, waw, tsade, qof, qaf
+*/
+function transcribeOption(optionName, value) {
+	if (optionName == 'vet') {
+		both.set('v', value);
+	} else if (optionName == 'gimel') {
+		both.set('g', value);
+	} else if (optionName == 'jim') {
+		both.set('j', value);
+	} else if (optionName == 'gimelWithoutDagesh') {
+		if (value == 'gh') {
+			both.set('g-', both.get('gh'));
+		} else {
+			both.set('g-', 'g');
+		}
+	} else if (optionName == 'dhalet') {
+		if (value == 'alwaysDh') {
+			both.set('d-', both.get('dh'));
+			both.set('D-', both.get('dh'));			
+		} else if (value == 'sometimesDh') {
+			both.set('d-', 'd');
+			both.set('D-', both.get('dh'));
+		} else {
+			both.set('d-', 'd');
+			both.set('D-', 'd');
+		}
+	} else if (optionName == 'tawWithoutDagesh') {
+		if (value == 'th') {
+			both.set('t-', both.get('th'));
+		} else {
+			both.set('t-', value);
+		}
+	} else if (optionName == 'waw') {
+		hebrewOverrides.set('w', value);
+	} else if (optionName == 'tsade') {
+		if (value == 'S') {
+			both.set('ts', both.get('S'));
+		} else {
+			both.set('ts', `<span class="digraph">${value}</span>`);
+		}
+	} else if (optionName == 'qof') {
+		if (value == 'K') {
+			hebrewOverrides.set('q', '<span class="thick">k</span>');
+		} else {
+			hebrewOverrides.set('q', value);
+		}
+	} else if (optionName == 'qaf') {
+		if (value == 'K') {
+			both.set('q', '<span class="thick">k</span>');
+		} else {
+			both.set('k', 'q');
+		}
+	}
+}
+
+function addTranscribeOptions(optionNames) {
+	function makeOption(optionName) {
+		return function (event) {
+			transcribeOption(optionName, event.target.value);
+			transcribePage();
+		}
+	}
+	for (let optionName of optionNames) {
+		$(`#option-${optionName}`).on('change', makeOption(optionName));
+	}
+}
+
+addTranscribeOptions([
+	'vet',
+	'gimel', 'jim',
+	'gimelWithoutDagesh',
+	'dhalet',
+	'tawWithoutDagesh',
+	'waw',
+	'tsade',
+	'qof', 'qaf'
+]);
+
+transcribePage();
