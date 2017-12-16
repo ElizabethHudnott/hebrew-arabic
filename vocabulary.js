@@ -123,7 +123,7 @@ function transcribeOption(optionName, value) {
 		if (value == 'S') {
 			both.set('ts', both.get('S'));
 		} else {
-			both.set('ts', `<span class="digraph">${value}</span>`);
+			both.set('ts', `<span class="digraph" style="width: 0.5em;">${value}</span>`);
 		}
 	} else if (optionName == 'qof') {
 		if (value == 'K') {
@@ -135,7 +135,7 @@ function transcribeOption(optionName, value) {
 		if (value == 'K') {
 			both.set('q', '<span class="thick">k</span>');
 		} else {
-			both.set('k', 'q');
+			both.set('q', 'q');
 		}
 	}
 }
