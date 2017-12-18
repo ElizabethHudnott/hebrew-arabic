@@ -17,6 +17,7 @@ both.set('E', '<span class="thin-e">e</span>');
 both.set('e.', '<span class="thin-e">e&#x306;</span>');
 both.set('eh', '<span class="tsere-trans">eh</span>');
 both.set('OO', '<span class="long">-o-</span>');
+both.set(' ', '<span style="display: inline-block; width: 15px;">&nbsp;</span>');
 
 both.set('v', 'b');
 both.set('g-', both.get('gh'));
@@ -39,7 +40,11 @@ function transcribeBoth(language, transcription) {
 		if (startOfSyllable && i < transcription.length - 1) {
 			output = output + ' align-right';
 		} else {
-			let endOfSyllable = (i == transcription.length - 1 || transcription[i + 1][0] == '-');
+			let endOfSyllable = (
+				i == transcription.length - 1 ||
+				transcription[i + 1][0] == '-' ||
+				transcription[i + 1][0] == ' '
+			);
 			if (endOfSyllable && i > 0) {
 				output = output + ' align-left';
 			}
@@ -58,7 +63,7 @@ function transcribeBoth(language, transcription) {
 				html = phone;
 			}
 			output = output + html;
-			startOfSyllable = (phone == '-');
+			startOfSyllable = (phone == '-' || phone == ' ');
 		}
 		output = output + '</td>';
 	}

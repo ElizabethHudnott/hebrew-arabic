@@ -74,3 +74,17 @@ beautiful
 upright, just, level, straight
 יָשָׁר
 
+small, young, insignificant
+קָטֹן
+
+distant, remote, far away
+רָחוֹק
+
+great, many
+רַב
+
+wicked, guilty
+רָשָׁע
+
+song
+שִׁיר
