@@ -1,5 +1,18 @@
+h1 {
+	margin-bottom: 1.3em;
+}
+
+h2.root {
+	margin-top: -1em;
+	margin-bottom: 0.7em;
+}
+
 .vocab, .meaning {
 	margin-left: 85px;
+}
+
+.meaning {
+	margin-bottom: 2em;
 }
 
 .meaning th {

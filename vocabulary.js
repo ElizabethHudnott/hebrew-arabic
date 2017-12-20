@@ -117,8 +117,8 @@ function transcribeOption(optionName, value) {
 			both.set('D-', 'd');
 		}
 	} else if (optionName == 'tawWithoutDagesh') {
-		if (value == 'th') {
-			both.set('t-', both.get('th'));
+		if (value.length > 1) {
+			both.set('t-', both.get(value));
 		} else {
 			both.set('t-', value);
 		}
@@ -129,6 +129,12 @@ function transcribeOption(optionName, value) {
 			both.set('ts', both.get('S'));
 		} else {
 			both.set('ts', `<span class="digraph" style="width: 0.5em;">${value}</span>`);
+		}
+	} else if (optionName == 'dhaal') {
+		if (value == "DH") {
+			both.set('DH', '<span class="digraph thick">dh</span>');
+		} else {
+			both.set('DH', '<span class="digraph thick">z</span>');
 		}
 	} else if (optionName == 'qof') {
 		if (value == 'K') {
@@ -164,7 +170,7 @@ addTranscribeOptions([
 	'dhalet',
 	'tawWithoutDagesh',
 	'waw',
-	'tsade',
+	'tsade', 'dhaal',
 	'qof', 'qaf'
 ]);
 
