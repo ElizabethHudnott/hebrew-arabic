@@ -22,13 +22,14 @@ both.set(' ', '<span style="display: inline-block; width: 15px;">&nbsp;</span>')
 both.set('v', 'b');
 both.set('g-', both.get('gh'));
 both.set('d-', 'd');
-both.set('D-', both.get('dh'));
-both.set('t-', both.get('th'));
+both.set('D-', 'd');
+both.set('t-', 't');
 both.set('j', 'g');
 both.set('ts', both.get('S'));
 both.set('-', '.');
 
 var hebrewOverrides = new Map();
+hebrewOverrides.set('w', 'v');
 hebrewOverrides.set('AA', both.get('AA'));
 hebrewOverrides.set('q', 'q');
 
