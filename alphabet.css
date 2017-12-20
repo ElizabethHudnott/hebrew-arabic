@@ -191,6 +191,10 @@ li {
 	line-height: 0.7;
 }
 
+label.big {
+	line-height: 1;
+}
+
 h2 .big {
 	font-size: 135%;
 }
@@ -392,4 +396,5 @@ table .no-b, .no-b {
 .ayin {
 	font-family: serif;
 	font-variant: small-caps;
+	vertical-align: +2px;
 }

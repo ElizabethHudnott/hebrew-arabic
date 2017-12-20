@@ -29,6 +29,7 @@ both.set('ts', both.get('S'));
 both.set('-', '.');
 
 var hebrewOverrides = new Map();
+hebrewOverrides.set('AA', both.get('AA'));
 hebrewOverrides.set('q', 'q');
 
 function transcribeBoth(language, transcription) {
@@ -124,6 +125,20 @@ function transcribeOption(optionName, value) {
 		}
 	} else if (optionName == 'waw') {
 		hebrewOverrides.set('w', value);
+	} else if (optionName == 'ayin') {
+		if (value == 'AA') {
+			hebrewOverrides.set('AA', '<span class="ayin digraph">aa</span>');
+		} else if (value == 'ʼ') {
+			hebrewOverrides.set('AA', both.get('ʼ'));
+		} else {
+			hebrewOverrides.set('AA', value);
+		}
+	} else if (optionName == 'ayn') {
+		if (value == 'AA') {
+			both.set('AA', '<span class="ayin digraph">aa</span>');
+		} else {
+			both.set('AA', 'ʻ');
+		}		
 	} else if (optionName == 'tsade') {
 		if (value == 'S') {
 			both.set('ts', both.get('S'));
@@ -170,6 +185,7 @@ addTranscribeOptions([
 	'dhalet',
 	'tawWithoutDagesh',
 	'waw',
+	'ayin', 'ayn',
 	'tsade', 'dhaal',
 	'qof', 'qaf'
 ]);
