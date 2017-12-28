@@ -3,7 +3,6 @@ h1 {
 }
 
 h2.root {
-	margin-top: -1em;
 	margin-bottom: 0.7em;
 }
 
@@ -71,4 +70,32 @@ h2.root {
 
 .tsere-trans {
 	font-style: italic;
+}
+
+#index {
+	align-items: flex-start;
+	display: inline-flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+}
+
+#index table {
+	margin: 0px;
+}
+
+#index td {
+	text-align: right;
+	vertical-align: text-bottom;
+}
+
+#index table {
+	min-width: 55px;
+}
+
+#index a, #index a {
+	text-decoration: none;
+}
+
+#index .arabic-char {
+	font-size: 270%;
 }
