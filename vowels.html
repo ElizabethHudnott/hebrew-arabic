@@ -7,7 +7,7 @@
 <body>
 <h1>Vowels</h1>
 <p>
-	Vowels are indicated be a combination of certain consonant letters which alternatively sometimes indicate vowels (<i>mater lectionis</i>) and annotations above or below any consonant letter. An exception is the shuruk, which is only ever placed beside the letter waw. The annotations are named <dfn>niqqud</dfn> in Hebrew and <dfn>harakat</dfn> in Arabic.
+	Vowels are indicated be a combination of certain consonant letters which alternatively sometimes indicate vowels (<i>mater lectionis</i>) and annotations above or below any consonant letter. An exception is the shuruk, which is only ever placed <em>beside</em> the letter waw. The annotations are collectively called <dfn>niqqud</dfn> in Hebrew and <dfn>harakat</dfn> in Arabic.
 </p>
 <p>Vowels are described in terms of four different aspects.</p>
 <dl>
@@ -67,14 +67,14 @@
 				<th>None</th>
 			</tr>
 			<tr>
-				<th>IPA</th>
+				<th>IPA<span class="footnote ipa-footnote"></span></th>
 				<td>a</td>
 				<td>i</td>
 				<td>u</td>
-				<td>e:</td>
-				<td>ɛ</td>
-				<td>ɔ</td>
-				<td>o:</td>
+				<td id="tsere-ipa">e:</td>
+				<td id="segol-ipa">ɛ</td>
+				<td id="kamatz-katan-ipa">ɔ</td>
+				<td id="holam-ipa">o:</td>
 				<td>⌀</td>
 			</tr>
 			<tr>
@@ -94,20 +94,22 @@
 				<td colspan="7" class="no-bb no-rb"></td>
 				<td rowspan="6" class="hebrew-char" class="no-lb"><span class="combo">&#x25cc;<span class="over" style="width:0.57em">&#x5b0;</span></span></td>
 			</tr>
-			<tr>
-				<th rowspan="2">(Extra) Short<span class="footnote"></span></th>
-				<td colspan="4" class="no-tb no-rb no-bb"></td>
-				<td class="hebrew-char no-b"><span class="combo">&#x25cc;<span class="over" style="width:0.55em">&#x5b0;</span></span></td>
-				<td colspan="2" class="no-b"></td>
+			<tr id="vocal-shewa">
+				<th id="short-label" rowspan="2">(Extra) Short<span class="footnote"></span></th>
+				<td id="kubutz-shewa" colspan="3" class="no-tb no-rb no-bb"></td>
+				<td class="no-tb no-bb no-rb"></td>
+				<td id="segol-shewa" class="hebrew-char no-tb no-bb no-lb no-rb"><span class="combo">&#x25cc;<span class="over" style="width:0.55em">&#x5b0;</span></span></td>
+				<td colspan="2" class="no-tb no-bb no-lb no-rb"></td>
 			</tr>
 			<tr>
-				<td class="hebrew-char" class="no-tb"><span class="combo">&#x25cc;<span class="over" style="width: 0.3em">&#x5b2;</span></span></td>
-				<td class="hebrew-char" class="no-tb"></td>
-				<td class="hebrew-char" class="no-tb"></td>
-				<td class="hebrew-char" class="no-tb"></td>
-				<td class="hebrew-char" class="no-tb"><span class="combo">&#x25cc;<span class="over" style="width: 0.3em">&#x5b1;</span></span></td>
-				<td class="hebrew-char" class="no-tb"><span class="combo">&#x25cc;<span class="over" style="width: 0.3em">&#x5b3;</span></span></td>
-				<td class="hebrew-char" class="no-tb"></td>
+				<th id="hataf-label" style="display: none;">Medium</th>
+				<td class="hebrew-char hataf no-tb"><span class="combo">&#x25cc;<span class="over" style="width: 0.3em">&#x5b2;</span></span></td>
+				<td class="hebrew-char hataf no-tb"></td>
+				<td class="hebrew-char hataf no-tb"></td>
+				<td class="hebrew-char tsere hataf no-tb"></td>
+				<td class="hebrew-char hataf no-tb"><span class="combo">&#x25cc;<span class="over" style="width: 0.3em">&#x5b1;</span></span></td>
+				<td class="hebrew-char kamatz-katan hataf no-tb"><span class="combo">&#x25cc;<span class="over" style="width: 0.3em">&#x5b3;</span></span></td>
+				<td class="hebrew-char hataf no-tb"></td>
 			</tr>
 			<tr>
 				<th style="text-align: left;">Medium&nbsp;/<span class="footnote"></span><span class="footnote"></span><br/>Long</th>
@@ -120,13 +122,13 @@
 				<td class="hebrew-char">
 					<span class="combo">&#x25cc;<span class="over" style="width:0.25em">&#x5bb;</span></span>
 				</td>
-				<td class="hebrew-char" style="padding-top: 33px;">
+				<td class="hebrew-char tsere" style="padding-top: 33px;">
 					<span class="combo">&#x25cc;<span class="over" style="width:0.37em">&#x5b5;</span></span>
 				</td>
 				<td class="hebrew-char">
 					<span class="combo">&#x25cc;<span class="over" style="width:0.37em">&#x5b6;</span></span>
 				</td>
-				<td class="hebrew-char">
+				<td class="hebrew-char kamatz-katan">
 					<span class="combo">&#x25cc;<span class="over" style="width:0.4em">&#x5b8;</span></span>
 				</td>
 				<td class="hebrew-char" style="padding-top: 33px;">
@@ -138,9 +140,9 @@
 				<td class="hebrew-char"></td>
 				<td class="hebrew-char">י<span class="combo">&#x25cc;<span class="over" style="width:0.55em">&#x5b4;</span></span></td>
 				<td class="hebrew-char">וּ&#x25cc;</td>
-				<td class="hebrew-char">י<span class="combo">&#x25cc;<span class="over" style="width:0.37em">&#x5b5;</span></span></td>
+				<td class="hebrew-char tsere">י<span class="combo">&#x25cc;<span class="over" style="width:0.37em">&#x5b5;</span></span></td>
 				<td class="hebrew-char">י<span class="combo">&#x25cc;<span class="over" style="width:0.37em">&#x5b6;</span></span></td>
-				<td class="hebrew-char"></td>
+				<td class="hebrew-char kamatz-katan"></td>
 				<td class="hebrew-char">וֺ&#x25cc;</td>
 			</tr>
 			<tr>
@@ -148,9 +150,9 @@
 				<td class="hebrew-char">ה<span class="combo">&#x25cc;<span class="over" style="width:0.4em">&#x5b7;</span></span></td>
 				<td class="hebrew-char"></td>
 				<td class="hebrew-char">וּה&#x25cc;</td>
-				<td class="hebrew-char">ה<span class="combo">&#x25cc;<span class="over" style="width:0.37em">&#x5b5;</span></span></td>
+				<td class="hebrew-char tsere">ה<span class="combo">&#x25cc;<span class="over" style="width:0.37em">&#x5b5;</span></span></td>
 				<td class="hebrew-char">ה<span class="combo">&#x25cc;<span class="over" style="width:0.37em">&#x5b6;</span></span></td>
-				<td class="hebrew-char">ה<span class="combo">&#x25cc;<span class="over" style="width:0.4em">&#x5b8;</span></span></td>
+				<td class="hebrew-char kamatz-katan">ה<span class="combo">&#x25cc;<span class="over" style="width:0.4em">&#x5b8;</span></span></td>
 				<td class="hebrew-char">ה<span class="combo">&#x25cc;<span class="over" style="width:0.02em; top: -0.11em;">&#x5b9;</span></span></td>
 			</tr>
 			<tr>
@@ -196,11 +198,32 @@
 	</figure>
 	<h2>Footnotes</h2>
 	<p class="footnotes">
-		In Sephardic pronunciation, tsere and segol are both pronounced as [e] (or [e:]) and kamatz katan is pronounced as [o], a shorter version of the holam [o:]. Katan means "small" and the vowel is "smaller" than the long vowels by being shorter.
+		In Sephardic pronunciation, tsere and segol are both pronounced as [e:] and [e] respectively (same sound, different lengths) and kamatz katan is pronounced as [o], a shorter version of the holam [o:]. Katan means "small" and the vowel is "smaller" than the long vowels by being shorter.
+		<button id="merge-sounds">Show (1)</button>
 	</p>
 	<ol class="footnotes">
 		<li>
-			The long versions of these are transcribed as <span class="emchar">ẹ</span> and <span class="emchar">ọ</span> (or <span class="long">a</span>) respectively, since <span class="long">e</span> and <span class="long">o</span> are already used for the tsere and holam. <span class="long">a</span> reflects the Sephardic pronunciation of kamatz gadol  ("big") as an <i>a</i> sound.
+			<p>When transcribing with intent to preserve the Tiberian (rather than Sephardic) pronunciation the long versions of these are transcribed as <span class="emchar">ẹ</span> and <span class="emchar">ọ</span> respectively, since <span class="long">e</span> and <span class="long">o</span> are already used for the tsere and holam. Most of the long vowels can also be transcribed as two letter combinations.</p>
+
+			<figure>
+				<table class="table">
+					<tr>
+						<th colspan="2">Transcription</th>
+					</tr>
+					<tr>
+						<th>1 Letter</th>
+						<th>2 Letters</th>
+					</tr>
+					<tr><td><span class="long">a</span></td><td>aa</td></tr>
+					<tr><td><span class="long">i</span></td><td>ee</td></tr>
+					<tr><td><span class="long">u</span></td><td>oo</td></tr>
+					<tr><td><span class="long">e</span></td><td>eh</td></tr>
+				</table>
+				<figcaption>Alternative transcriptions for long vowels.</figcaption>
+			</figure>
+		</li>
+		<li class="ipa-footnote">
+			A colon written on this row indicates that the tsere and the holam are always long, although the other vowels may also sometimes be long (and their proper IPA representations would include a colon also in this case).
 		</li>
 		<li>
 			<p>
@@ -229,13 +252,14 @@
 				</li>
 			</ol>
 			<p>
-				I will defer discussion until a later section concerning the rules on how to identify a silent shewa and how to identify a vocal shewa.
+				I will defer the discussion until a later section concerning the rules of how to identify a silent shewa and how to identify a vocal shewa.
 			</p>
 			<p>
 				The Palestinian and Babylonian notations didn't have any special symbols to distinguish the hataf vowels. In the surviving vocal traditions they've each been promoted to the corresponding medium length vowel.
+				<button id="lengthen-hataf">Show (2)</button>
 			</p>
 			<p>
-				The pronunciation of vocal shewa in Tiberian Hebrew follows the rules in <a href="#fig-vocal-shewa" class="xref"></a>. These rules are seldom followed anymore, though the Yemenite Jews and Sephardim from Amsterdam are known for them.
+				The pronunciation of vocal shewa in Tiberian Hebrew follows the rules in <a href="#fig-vocal-shewa" class="xref"></a>. These rules are seldom followed anymore <button id="fix-shewa">Show (3)</button>, though the Yemenite Jews and Sephardim from Amsterdam are known for them.
 			</p>
 			<figure id="fig-vocal-shewa">
 				<table class="table">
@@ -296,7 +320,7 @@
 		<li>
 			<p>In the Tiberian system the patterns on this row can represent both medium and long length vowels. With the exception of tsere and holam (which historically were always long), these patterns historically represented long vowels in open syllables (CV) and medium length vowels in closed syllables (CVC), the lengthened vowel "filling in" for the "missing" consonant. The distinction was largely allophonic, meaning there were rarely any words which differed only in respect of one of these symbols being pronounced as medium length in one word and long in the other. Outside of the Tiberian tradition the vowel length for the patterns on this row only varies between open and closed syllables in the case of kamatz and is fixed as being either always medium or always long otherwise. Furthermore, the realization of "medium" and "long" vowels as two different lengths of sound depending on whether or not there follows a <span class="big">ה ,ו ,י</span> or <span class="big">א</span> is now considered irrelevant in Modern Israeli Hebrew even though the Tiberian tradition is thought to have once implemented this feature systematically in the same way that Arabic does.</p>
 
-			<p>Instead, medieval Sephardic pronunciation (from which Modern Hebrew is ultimately descended) largely differentiated between medium and long length vowels based on the vowel symbol itself rather than the presence or absence of a mater lectionis letter afterwards. Tsere and holam are always long in this tradition (as in Tiberian). Segol is medium length irrespective of whether it's followed by a <span class="big">י</span>. Kubutz and patach (except when followed by <span class="big">ה</span> or <span class="big">א</span>) are also always medium length because the open/closed syllable distinction now only applies to kamatz. Kamatz is medium or long, depending on whether the syllable is open or closed (as in Tiberian, but for Sephardic Jews it also changes from an <i>o</i> sound to an <i>a</i> sound. <em>It's also pronounced as long-<i>a</i> in stressed syllables, which are usually the last syllables in each word although other syllables can be noted as stressed by adding a meteg</em>). Hiriq is either medium or long, but dependent only on whether there is <span class="big">י</span> after it, and open&nbsp;vs. closed syllable is irrelevant. Shuruk is long (as always). The difference in length between segol and tsere exists despite the fact that early examples of Palestinian notation used only one symbol in the places where Tiberian had either segol or tsere, suggesting that perhaps the difference in length is a later development. (Later examples of Palestinian notation did use two separate symbols.)</p>
+			<p>Instead, medieval Sephardic pronunciation (from which Modern Hebrew is ultimately descended) largely differentiated between medium and long length vowels based on the vowel symbol itself rather than the presence or absence of a mater lectionis letter afterwards. Tsere and holam are always long in this tradition (as in Tiberian). Segol is medium length irrespective of whether it's followed by a <span class="big">י</span>. Kubutz and patach (except when followed by <span class="big">ה</span> or <span class="big">א</span>) are also always medium length because the open/closed syllable distinction now only applies to kamatz. Kamatz is medium or long, depending on whether the syllable is open or closed (as in Tiberian, but for Sephardic Jews it also changes from an <i>o</i> sound to an <i>a</i> sound. <em>It's also pronounced as long-<i>a</i> in stressed syllables, which are usually the last syllables of each word although other syllables can be noted as stressed by adding a meteg</em>). Hiriq is either medium or long, but dependent only on whether there is <span class="big">י</span> after it, and open&nbsp;vs. closed syllable is irrelevant. Shuruk is long (as always). The difference in length between segol and tsere exists despite the fact that early examples of Palestinian notation used only one symbol in the places where Tiberian had either segol or tsere, suggesting that perhaps the difference in length is a later development. (Later examples of Palestinian notation did use two separate symbols.)</p>
 		</li>
 		<li>
 			<span class="big">א</span> can also occur instead of <span class="big">ה</span>.
@@ -314,6 +338,8 @@
 	<a href="index.html">Return to main page</a>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="vowels.js"></script>
 </body>	
 </html>
 

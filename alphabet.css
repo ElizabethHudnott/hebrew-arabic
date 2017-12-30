@@ -205,7 +205,11 @@ h2 .big {
 }
 
 .long {
-	text-decoration: overline;
+	border-top-style: solid;
+	border-top-width: 0.1em;
+	display: inline-block;
+	line-height: 0.9;
+	min-width: 0.5em;
 }
 
 .input {
