@@ -6,6 +6,7 @@ both.set('ch', '<span class="digraph">ch</span>');
 both.set('kh', '<span class="digraph">kh</span>');
 both.set('T', '<span class="thick">t</span>');
 both.set('KH', '<span class="digraph">k<span class="hebrew">h</span></span>');
+both.set('L', '<span class="thick">l</span>');
 both.set('AA', '<span class="ayin digraph">aa</span>');
 both.set('gh', '<span class="digraph">gh</span>');
 both.set('S', '<span class="thick">s</span>');
@@ -36,13 +37,15 @@ hebrewOverrides.set('q', 'q');
 function transcribeBoth(language, transcription) {
 	var output = '';
 	var startOfSyllable = true;
+	var endOfSyllable;
 	for (let i = 0; i < transcription.length; i++) {
 		let items = transcription[i];
 		output = output + `<td colspan="${items.length}" class="english-char`;
+		endOfSyllable = false;
 		if (startOfSyllable && i < transcription.length - 1) {
 			output = output + ' align-right';
 		} else {
-			let endOfSyllable = (
+			endOfSyllable = (
 				i == transcription.length - 1 ||
 				transcription[i + 1][0] == '-' ||
 				transcription[i + 1][0] == ' '
@@ -51,7 +54,8 @@ function transcribeBoth(language, transcription) {
 				output = output + ' align-left';
 			}
 		}
-		output = output + '">';
+		output = output + '"';
+		output = output + '>';
 
 		for (let phone of items) {
 			var html = undefined;

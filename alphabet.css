@@ -315,9 +315,9 @@ h2 {
 }
 
 .footnote::before, .footnote-duplicate {
-	font-size: small;
+	font-size: 55%;
 	margin-left: 3px;
-	vertical-align: 12px;
+	vertical-align: 0.9em;
 }
 
 .footnote::before {
@@ -406,4 +406,13 @@ table .no-b, .no-b {
 	font-family: serif;
 	font-variant: small-caps;
 	vertical-align: +2px;
+}
+
+.ipa-table {
+	float: right;
+}
+
+.ipa-table .dialect-label {
+	font-size: smaller;
+	border-bottom-width: 0px;
 }

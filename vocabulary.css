@@ -54,11 +54,15 @@ h2.root {
 	text-decoration-color: inherit;
 }
 
-.vocab .digraph {
+.digraph {
 	display: inline-block;
 	letter-spacing: -2px;
 	transform: scale(0.8, 1) translate(-20%);
 	width: 0.7em;
+}
+
+.thick .digraph, .thick.digraph {
+	text-decoration: underline;
 }
 
 .vocab .thin-e {
