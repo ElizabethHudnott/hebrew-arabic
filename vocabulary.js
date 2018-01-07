@@ -1,5 +1,6 @@
 var both = new Map();
 
+both.set('-', '.');
 both.set('dh', '<span class="digraph">dh</span>');
 both.set('H', '<span class="thick">h</span>');
 both.set('ch', '<span class="digraph">ch</span>');
@@ -14,6 +15,7 @@ both.set('D', '<span class="thick">d</span>');
 both.set('DH', '<span class="digraph thick">dh</span>');
 both.set('sh', '<span class="digraph">sh</span>');
 both.set('th', '<span class="digraph" style="width: 0.5em">th</span>');
+both.set('aai', 'a' + both.get('-') + 'ai');
 both.set('E', '<span class="thin-e">e</span>');
 both.set('e.', '<span class="thin-e">e&#x306;</span>');
 both.set('eh', '<span class="tsere-trans">eh</span>');
@@ -42,7 +44,9 @@ function transcribeBoth(language, transcription) {
 		let items = transcription[i];
 		output = output + `<td colspan="${items.length}" class="english-char`;
 		endOfSyllable = false;
-		if (startOfSyllable && i < transcription.length - 1) {
+		if (items[1] == 'e.') {
+			output = output + ' align-left';
+		} else if (startOfSyllable && i < transcription.length - 1) {
 			output = output + ' align-right';
 		} else {
 			endOfSyllable = (
@@ -79,16 +83,14 @@ function transcribeBoth(language, transcription) {
 function transcribePage() {
 	$('tr[data-transcribe]').each(function (index, element) {
 		var jqElem = $(element);
-		var word = jqElem.children().eq(0);
-		word.detach();
+		var word = jqElem.children('.hebrew-char, .arabic-char');
 		var language;
 		if (word.hasClass('hebrew-char')) {
 			language = 'hebrew';
 		} else {
 			language = 'arabic'
 		}
-		jqElem.html('');
-		jqElem.append(word);
+		jqElem.children('.english-char').remove();
 		var phones = JSON.parse('[' + element.dataset.transcribe + ']');
 		var cells = transcribeBoth(language, phones)
 		jqElem.append(cells);
