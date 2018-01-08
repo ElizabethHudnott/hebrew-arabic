@@ -40,7 +40,11 @@ h2.root {
 	font-size: 200%;
 }
 
-.vocab .arabic-char, .vocab .hebrew-char {
+.vocab .europe-char {
+	font-size: 200%;
+}
+
+.vocab .arabic-char, .vocab .hebrew-char, .vocab .europe-char {
 	padding-right: 15px;
 	text-align: right;
 	width: 110px;
