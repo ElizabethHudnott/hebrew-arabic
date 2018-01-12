@@ -417,3 +417,7 @@ table .no-b, .no-b {
 	font-size: smaller;
 	border-bottom-width: 0px;
 }
+
+.alien {
+	font-style: italic;
+}
