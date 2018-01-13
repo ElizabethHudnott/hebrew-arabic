@@ -16,6 +16,7 @@ both.set('DH', '<span class="digraph thick">dh</span>');
 both.set('sh', '<span class="digraph">sh</span>');
 both.set('th', '<span class="digraph" style="width: 0.5em">th</span>');
 both.set('aai', 'a' + both.get('-') + 'ai');
+both.set('OOi', 'o' + both.get('-') + 'oi');
 both.set('E', '<span class="thin-e">e</span>');
 both.set('e.', '<span class="thin-e">e&#x306;</span>');
 both.set('eh', '<span class="tsere-trans">eh</span>');
@@ -52,7 +53,8 @@ function transcribeBoth(language, transcription) {
 			endOfSyllable = (
 				i == transcription.length - 1 ||
 				transcription[i + 1][0] == '-' ||
-				transcription[i + 1][0] == ' '
+				transcription[i + 1][0] == ' ' ||
+				items[items.length - 1] == '-'
 			);
 			if (endOfSyllable && i > 0) {
 				output = output + ' align-left';
