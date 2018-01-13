@@ -98,8 +98,12 @@ div.box {
 	vertical-align: top;
 }
 
-#za-alt, #sin, #soft-tav-trans-alt {
+#za-alt, #shin, #soft-tav-trans-alt {
 	display: none;
+}
+
+#sin {
+	visibility: hidden;
 }
 
 #faa {

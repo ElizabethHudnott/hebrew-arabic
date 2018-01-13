@@ -26,7 +26,7 @@ $('#za').hide();
 $('#za-alt').show();
 
 $('#sin-shin').hide();
-$('#sin').show();
+$('#sin').css('visibility', 'visible');
 $('#shin').show();
 
 var arabicInternal = $('#arabic-internal');
