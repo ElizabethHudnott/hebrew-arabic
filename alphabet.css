@@ -258,10 +258,6 @@ h2 .big {
 	text-decoration-color: inherit;
 }
 
-.english-char.arabic-only .thick, .english-char .arabic-only.thick {
-	font-weight: inherit;
-}
-
 .hebrew-only .raphe, .hebrew-only.raphe {
 	text-decoration-color: inherit;
 }
@@ -424,4 +420,19 @@ table .no-b, .no-b {
 
 .alien {
 	font-style: italic;
+}
+
+.references {
+	list-style-type: none;
+}
+.references li {
+	margin-top: 0.5em;
+}
+
+.references a {
+	text-decoration: none;
+}
+
+.references a:hover {
+	text-decoration: underline;
 }

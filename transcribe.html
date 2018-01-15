@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Automated Analysis of Hebrew &amp; Arabic</title>
+	<link rel="stylesheet" href="alphabet.css"/>
+</head>
+<body>
+<h1>Tajweed Helper, Grammar Rules and Cognate Finder</h1>
+<table>
+	<tr>
+		<td>&nbsp;</td>
+		<th>
+			<h2>Arabic</h2>
+		</th>
+		<th>
+			<h2>Hebrew</h2>
+		</th>
+	</tr>
+	<tr>
+		<th>Prediction Algorithms</th>
+		<td colspan="2" id="controls">
+			<button id="copy-to-arabic">&larr; Copy</button>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Programmatic Representation
+		</th>
+		<td><span id="arabic-internal" class="common-container"></span></td>
+		<td><span id="hebrew-internal" class="common-container"></span></td>
+	</tr>
+	<tr>
+		<th>
+			<label for="arabic-input">Script</label>
+		</th>
+		<td>
+			<input id="arabic-input" type="text" class="input"/>
+		</td>
+		<td>
+			<input id="hebrew-input" type="text" class="input"/>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Transcription
+		</th>
+		<td id="arabic-transliteration" class="transliteration arabic-only"></td>
+		<td id="hebrew-transliteration" class="transliteration"></td>
+	</tr>
+	<tr>
+		<th>
+			Pronunciation Rules
+		</th>
+		<td id="tajweed" class="arabic-only pronunciation">
+		</td>
+	</tr>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="transcribe.js"></script>
+</body>
+</html>
