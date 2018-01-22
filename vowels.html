@@ -340,27 +340,86 @@
 
 <section>
 	<h1>Syllable Structures</h1>
+	<h2>Simple Rules</h2>
 	<ul>
 		<li>
-			The possible ways of forming syllables in a language are described using patterns of <span class="syllable-structure">C</span>s and <span class="syllable-structure">V</span>s, where <span class="syllable-structure">C</span> stands for any consonant and <span class="syllable-structure">V</span> stands for any vowel. We'll also use the convention (not used by all authors) that <span class="syllable-structure">VV</span> stands for a long vowel.
-		</li>
-		<li>
-			A shaddah (<span class="big">◌ّ</span>) or strengthening dagesh implies two identical consonants (which sometimes belong to separate syllables).
-		</li>
-		<li>
-			A diphthong counts as a vowel and consonant (<span class="syllable-structure">VC</span>) for the purpose of identifying syllables.
-		</li>
-		<li>
-			Stolen Patach isn't counted at all.
-		</li>
-		<li>
-			Analytically, it is simplest to consider vocal shewa (ĕ) as a vowel that forms part of an open (<span class="syllable-structure">CV</span>) syllable. In terms of pronunciation though, a shewa is a brief burst of sound, shorter than a normal vowel, and it makes to think of the shewa and the preceeding consonant as attached to the syllable that follows it, so as to not accidentally lengthen the shewa.
+			There are two kinds of syllables.
 			<ul>
-				<li>According to the Tiberian pronunciation rules a vocal shewa is the only instance where a syllable is <span class="syllable-structure">CV</span>, and under this system nearly all unstressed syllables are 3 units long, while a stressed syllable may be 3 or 4 units long.</li>
+				<li><em>Open syllables</em> with a <em>Consonant&ndash;Vowel</em> pattern.</li>
+				<li><em>Closed syllables</em> with a <em>Consonant&ndash;Vowel&ndash;Consonant</em> pattern.</li>
 			</ul>
 		</li>
 		<li>
-			A word is most reliably broken into syllables by starting from the end of the word and working backwards, matching letters and niqqud to the patterns in <a href="#fig-syllables" class="xref"></a> as you go. However, starting from the beginning of the word and reading forwards usually works too.
+			Thus, when reading, one has to distinguish three things.
+			<ol>
+				<li>The first consonant.</li>
+				<li>The vowel (which may be short or long).</li>
+				<li>Whether or not the next consonant forms part of the sound of the current syllable (forming a closed syllable) or belongs as the first consonant of the next syllable (making the current syllable an open one).
+			</ol>
+		</li>
+		<li>
+			If the consonant in question is marked with one these annotations then the syllable is closed, otherwise it is open (in a fully annotated text).
+			<ul>
+				<li>A sukun, or, equivalently a vocal shewa.</li>
+				<li>A shaddah, or, equivalently a strengthening dagesh.</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h2>Full Rules</h2>
+	<ul>
+		<li>
+			The possible ways of forming syllables in a language can be described using patterns of <span class="syllable-structure">C</span>s and <span class="syllable-structure">V</span>s, where <span class="syllable-structure">C</span> stands for any consonant and <span class="syllable-structure">V</span> stands for any vowel.
+		</li>
+		<li>
+			English syllable are summarized by the structure <span class="syllable-structure">(CCC)V(CCCC)</span>, where one or more of the letters in brackets do not occur in every syllable and the vowel in this case can be short, long vowel or a diphthong. Thus, the word <i>strengths</i> (/strɛŋkθs/ in IPA) fits this pattern with all of the optional consonant slots filled and therefore (because all of the sounds have been matched) the whole word is one syllable.  Fortunately, Hebrew and Arabic have simpler syllable structures.
+		</li>
+		<li>
+			I'll use the convention (not used unanimously by all authors) that <span class="syllable-structure">VV</span> stands for a long vowel.
+		</li>
+		<li>
+			A shaddah (<span class="big">◌ّ</span>) or a strengthening dagesh signals two identical consonants (which sometimes belong to separate syllables).
+		</li>
+		<li>
+			Some fudges are commonly used to keep things simple.
+			<ul>
+				<li>
+					A diphthong counts as a vowel and consonant (<span class="syllable-structure">VC</span> or <span class="syllable-structure">VVC</span>) for the purpose of identifying syllables.
+				</li>
+				<li>
+					Stolen Patach isn't counted at all.
+				</li>
+				<li>
+					Analytically, it is simplest to consider vocal shewa (ĕ) as a vowel that forms part of an open syllable (<span class="syllable-structure">CV</span>). In terms of pronunciation though, a shewa is a brief burst of sound, shorter than a normal vowel, and it makes to think of the shewa and the preceeding consonant as attached to the syllable that follows it, so as to not accidentally lengthen the shewa.  This difficulty causes some authors use a different classification system that includes additional terms such as, "doubly closed syllable" or "virtually closed syllable".
+					<ul>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			According to the Tiberian pronunciation rules all <span class="syllable-structure">CV</span> syllables have either a vocal shewa or a hataf vowel.
+		</li>
+		<li>
+			Super heavy syllables only occur in Arabic in two specific circumstances.
+			<ol>
+				<li>
+					In uses of a word outside of the context of a sentence, where it is written without a short vowel or a tanwin present on the last letter. Final vowels and tanwin perform grammatical functions, so when used as a word in a sentence of Classical Arabic writing these words would have one of these endings attached (<i>-a</i>, <i>-i</i>, <i>-u</i>, <i>-an</i>, <i>-in</i> or <i>-un</i>). However, when speaking and pausing for breath after the word, coming to the end of sentence, or finishing recitation then these word endings are dropped, and this will cause a super heavy syllable to form in spoken word.
+				</li>
+				<li>
+					When the long vowel <i class="long">a</i> occurs before a letter with a shaddah (<span class="big">◌ّاْ◌َ</span>).
+					<ol>
+						<li>
+							If the letter with shaddah is the last letter of the word then a <span class="syllable-structure">CVVCC</span> syllable occurs.
+						</li>
+						<li>
+							If it is not the last letter then a <span class="syllable-structure">CVVC</span> syllable occurs and the third consonant forms the beginning of the next syllable.
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>
+			A word is most reliably broken into syllables by starting from the end of the word and working backwards, matching letters and vowel signs to the patterns in <a href="#fig-syllables" class="xref"></a> as you go. However, starting from the beginning of the word and reading forwards usually works too.
 		</li>
 	</ul>
 	<figure id="fig-syllables">
@@ -392,19 +451,22 @@
 				</td>
 			</tr>
 			<tr>
-				<th rowspan="3">Closed</th>
+				<th rowspan="4">Closed</th>
 				<td class="syllable-structure">CVC</td>
 			</tr>
 			<tr>
 				<td class="syllable-structure">CVVC</td>
-				<td rowspan="2">
+				<td rowspan="3">
 					Super Heavy<br/>
-					<span class="pronunciation-note">(4 units)</span>
+					<span class="pronunciation-note">(4&ndash;5 units)</span>
 				</td>
 			</tr>
 			<tr>
 				<td class="syllable-structure">CVCC</td>
-				<td>Only occurs in Arabic.</td>
+				<td rowspan="2">Only occurs in Arabic.</td>
+			</tr>
+			<tr>
+				<td class="syllable-structure">CVVCC</td>
 			</tr>
 		</table>
 		<figcaption>Syllable structures in Hebrew and Arabic.</figcaption>
