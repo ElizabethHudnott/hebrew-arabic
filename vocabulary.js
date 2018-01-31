@@ -68,7 +68,9 @@ function transcribeBoth(language, transcription) {
 			if (language == 'hebrew') {
 				html = hebrewOverrides.get(phone);
 			}
-			if (html === undefined) {
+			if (html === undefined &&
+				(language !== undefined || phone.length > 1 || phone != phone.toLowerCase())
+			) {
 				html = both.get(phone);
 			}
 			if (html === undefined) {
@@ -89,7 +91,7 @@ function transcribePage() {
 		var language;
 		if (word.hasClass('hebrew-char')) {
 			language = 'hebrew';
-		} else {
+		} else if (word.hasClass('arabic-char')) {
 			language = 'arabic'
 		}
 		jqElem.children('.english-char').remove();
