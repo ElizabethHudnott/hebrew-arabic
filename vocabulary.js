@@ -28,7 +28,6 @@ both.set('g-', both.get('gh'));
 both.set('d-', 'd');
 both.set('D-', 'd');
 both.set('t-', 't');
-both.set('j', 'g');
 both.set('ts', both.get('S'));
 both.set('-', '.');
 

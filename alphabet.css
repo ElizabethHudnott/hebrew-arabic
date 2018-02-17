@@ -370,6 +370,10 @@ figcaption {
 	top: 0;
 }
 
+.big .over {
+	line-height: 1;
+}
+
 .vowel-chart a {
 	text-decoration: none;
 }
