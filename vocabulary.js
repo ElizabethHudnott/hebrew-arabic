@@ -29,7 +29,6 @@ both.set('d-', 'd');
 both.set('D-', 'd');
 both.set('t-', 't');
 both.set('ts', both.get('S'));
-both.set('-', '.');
 
 var hebrewOverrides = new Map();
 hebrewOverrides.set('w', 'v');
@@ -59,8 +58,7 @@ function transcribeBoth(language, transcription) {
 				output = output + ' align-left';
 			}
 		}
-		output = output + '"';
-		output = output + '>';
+		output = output + '">';
 
 		for (let phone of items) {
 			var html = undefined;
@@ -68,7 +66,7 @@ function transcribeBoth(language, transcription) {
 				html = hebrewOverrides.get(phone);
 			}
 			if (html === undefined &&
-				(language !== undefined || phone.length > 1 || phone != phone.toLowerCase())
+				(language !== undefined || phone === '-' || phone.length > 1 || phone != phone.toLowerCase())
 			) {
 				html = both.get(phone);
 			}
