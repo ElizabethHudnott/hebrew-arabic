@@ -358,7 +358,6 @@ figcaption {
 .pronunciation-note {
 	font-size: initial;
 	font-style: italic;
-	vertical-align: +2px;
 }
 
 .combo {
@@ -450,6 +449,7 @@ table .no-b, .no-b {
 }
 
 .placeholder {
+	font-size: 90%;
 	font-style: italic;
 }
 
@@ -481,4 +481,13 @@ table .no-b, .no-b {
 .same-height .hebrew-char {
 	display: inline-block;
 	margin-bottom: 0.25em;
+}
+
+.consonant-placeholder {
+	font-size: 90%;
+	vertical-align: -0.1em;
+}
+
+.strong {
+	font-weight: bold;
 }

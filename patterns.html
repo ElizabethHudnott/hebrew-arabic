@@ -10,13 +10,13 @@
 	<table class="table">
 		<tr>
 			<th rowspan="4" class="thick-border">Person</th>
-			<th colspan="2" class="thick-border">Complete</th>
-			<th colspan="4" class="thick-border">Incomplete</th>
+			<th colspan="2" class="thick-border">Perfect</th>
+			<th colspan="4" class="thick-border">Imperfect</th>
 		</tr>
 		<tr>
 			<th colspan="2" class="thick-border">Past</th>
-			<th colspan="2" class="thick-border">Present</th>
-			<th colspan="2" class="thick-border">Future</th>
+			<th colspan="2" class="thick-border">Present Continuous</th>
+			<th colspan="2" class="thick-border">Simple Future</th>
 		</tr>
 		<tr>
 			<th colspan="6" class="thick-border">Singular</th>
@@ -54,7 +54,7 @@
 			</td>
 		</tr>
 		<tr>
-			<th class="thick-border">3rd</th>
+			<th rowspan="2" class="thick-border">3rd</th>
 			<td class="english-char thick-border">
 				He has <span class="big-placeholder"></span>
 			</td>
@@ -74,54 +74,136 @@
 				She will <span class="big-placeholder"></span>
 			</td>
 		</tr>
+		<tr>
+			<td colspan="2" class="english-char thick-border">
+				It has <span class="big-placeholder"></span><br/>
+				One has <span class="big-placeholder"></span><br/>
+				They have <span class="big-placeholder"></span>
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				It is <span class="big-placeholder"></span>&ndash;ing<br/>
+				One is <span class="big-placeholder"></span>&ndash;ing<br/>
+				They are <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				It will <span class="big-placeholder"></span><br/>
+				One will <span class="big-placeholder"></span><br/>
+				They will <span class="big-placeholder"></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="thick-border"></td>
+			<th colspan="6" class="thick-border">Dual</th>
+		</tr>
+		<tr>
+			<th class="thick-border">1st</th>
+			<td colspan="2" class="english-char thick-border">
+				We have both <span class="big-placeholder"></span>
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				We are both <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				We will both <span class="big-placeholder"></span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">2nd</th>
+			<td colspan="2" class="english-char thick-border">
+				You have both <span class="big-placeholder"></span>
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				You are both <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				You will both <span class="big-placeholder"></span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">3rd</th>
+			<td colspan="2" class="english-char thick-border">
+				They have both <span class="big-placeholder"></span>
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				They are both <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				They will both <span class="big-placeholder"></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="thick-border"></td>
+			<th colspan="6" class="thick-border">Plural</th>
+		</tr>
+		<tr>
+			<th class="thick-border">1st</th>
+			<td colspan="2" class="english-char thick-border">
+				We have <span class="big-placeholder"></span>
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				We are <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				We will <span class="big-placeholder"></span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">2nd</th>
+			<td colspan="2" class="english-char thick-border">
+				You have <span class="big-placeholder"></span>
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				You are <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				You will <span class="big-placeholder"></span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">3rd</th>
+			<td colspan="2" class="english-char thick-border">
+				They have <span class="big-placeholder"></span>
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				They are <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				They will <span class="big-placeholder"></span>
+			</td>
+		</tr>
 	</table>
 	<figcaption>Some English verb conjugations.</figcaption>
 </figure>
 
-<h2>Algorithm for Conjugating an Arabic Verb</h2>
+<h2>Algorithm for Conjugating a Verb</h2>
 <ol>
-	<li>
-		<table class="table">
-			<tr>
-				<th>Tense</th>
-				<th>Add</th>
-			</tr>
-			<tr>
-				<th>Past or Present</th>
-				<td class="pronunciation-note">Nothing</td>
-			</tr>
-			<tr>
-				<th>Future</th>
-				<td>
-					<span class="arabic-char">‏سَـ</span><br/>
-					<span class="english-char">sa </span><span class="pronunciation-note">or</span><br/>
-					<span class="arabic-char">سَوْفَ‎</span><br/>
-					<span class="english-char">sawfa </span><span class="pronunciation-note">(separate word)</span>
-				</td>
-			</tr>
-		</table>
-	</li>
 	<li>
 		<table class="table same-height">
 			<tr>
-				<th rowspan="2">Tense</th>
+				<th rowspan="2">
+					<span class="arabic">Tense</span> / <span class="hebrew">Aspect</span>
+				</th>
 				<th rowspan="2">Person</th>
 				<th rowspan="2">Gender</th>
 				<th rowspan="2">Number</th>
-				<th colspan="2">Add</th>
+				<th colspan="2">Add to the Front</th>
 			</tr>
 			<tr>
 				<th>Arabic</th>
 				<th>Hebrew</th>
 			</tr>
 			<tr>
-				<th>Past</th>
+				<th>
+					<span class="arabic">Past</span><br/>
+					<span class="hebrew">Perfect</span>
+				</th>
 				<td colspan="3">&xrArr;</td>
 				<td colspan="2" class="pronunciation-note">Nothing</td>
 			</tr>
 			<tr>
 				<th rowspan="7">
-					Present or Future<br/>
+					<span class="arabic">Present or Future</span><br/>
+					<span class="hebrew">Imperfect</span><br/>
 					<span class="th-note big">
 						&#x25cc;َ /
 						<span class="combo">&#x25cc;<span class="over" style="width:0.57em">&#x5b0;</span></span>
@@ -195,27 +277,39 @@
 				</td>
 			</tr>
 		</table>
-		<p>
-			<strong>There are no verb conjugations specifically for 1st person dual. Hebrew doesn't have dual number verbs (use the plural form instead).</strong>
-		</p>
+		<ul class="strong">
+			<li>There are no verb conjugations specifically for 1st person dual.</li>
+			<li>Hebrew doesn't have dual number verbs (use the plural form instead).</li>
+			<li>Mishnaic Hebrew and Aramaic from the same period and later redefines the perfect aspect patterns as past tense and the imperfect patterns as future tense and also adds a third set of patterns for the present tense.</li>
+		</ul>
 	</li>
 	<li>
-		<table class="table">
+		<table class="table same-height">
 			<tr>
-				<th>Tense</th>
-				<th>Person</th>
-				<th>Number</th>
-				<th>Gender</th>
-				<th>Add</th>
+				<th rowspan="2">
+					<span class="arabic">Tense</span> / <span class="hebrew">Aspect</span>
+				</th>
+				<th rowspan="2">Person</th>
+				<th rowspan="2">Number</th>
+				<th rowspan="2">Gender</th>
+				<th colspan="2">Add To / Modify the Ending</th>
 			</tr>
 			<tr>
-				<th rowspan="6">Present or Future</th>
+				<th>Arabic</th>
+				<th>Hebrew</th>
+			</tr>
+			<tr>
+				<th rowspan="6">
+					<span class="arabic">Present or Future</span><br/>
+					<span class="hebrew">Imperfect</span>
+				</th>
 				<th>1st</th>
 				<td colspan="2">&xrArr;</td>
 				<td rowspan="2">
 					<span class="arabic-char">&#x25cc;ُ</span><br/>
 					<span class="english-char">u</span>
 				</td>
+				<td rowspan="2" class="pronunciation-note">Nothing</td>
 			</tr>
 			<tr>
 				<td>&xrArr;</td>
@@ -233,22 +327,44 @@
 					<span class="arabic-char">يْنَ&#x25cc;ِ</span><br/>
 					<span class="english-char"><span class="long">i</span>na</span>
 				</td>
+				<td>
+					<span class="hebrew-char">
+						י<span class="combo consonant-placeholder">③<span class="over" style="width:0.85em">&#x5b4;</span></span><span class="combo consonant-placeholder">②<span class="over" style="width:0.85em">&#x5b0;</span></span>
+					</span><br/>
+					<span class="english-char">ĕ<span class="placeholder">C</span><span class="long">i</span></span>
+				</td>
 			</tr>
 			<tr>
-				<th rowspan="3">2nd or 3rd</th>
-				<th>Dual</th>
+				<th rowspan="3">
+					2nd or 3rd<br/>
+					<span class="th-note big">ن</span>
+				</th>
+				<th>
+					Dual<br/>
+					<span class="th-note big">نِ</span>
+				</th>
 				<td>&xrArr;</td>
 				<td>
 					<span class="arabic-char">اْنِ&#x25cc;َ</span><br/>
 					<span class="english-char"><span class="long">a</span>ni</span>
 				</td>
+				<td class="pronunciation-note">N/A</td>
 			</tr>
 			<tr>
-				<th rowspan="2">Plural</th>
+				<th rowspan="2">
+					Plural<br/>
+					<span class="th-note big">نَ</span>
+				</th>
 				<th>Masculine</th>
 				<td>
 					<span class="arabic-char">وْنَ&#x25cc;ُ</span><br/>
 					<span class="english-char"><span class="long">u</span>na</span>
+				</td>
+				<td>
+					<span class="hebrew-char">
+						וּ<span class="consonant-placeholder">③</span><span class="combo consonant-placeholder">②<span class="over" style="width:0.85em">&#x5b0;</span></span>
+					</span><br/>
+					<span class="english-char">ĕ<span class="placeholder">C</span><span class="long">u</span></span>
 				</td>
 			</tr>
 			<tr>
@@ -256,6 +372,31 @@
 				<td>
 					<span class="arabic-char">نَ</span><br/>
 					<span class="english-char">na</span>
+				</td>
+				<td>
+					<span class="hebrew-char">נָה‎</span><br/>
+					<span class="english-char">n<span class="long">a</span></span>
+				</td>
+			</tr>
+		</table>
+	</li>
+	<li>
+		<table class="table">
+			<tr>
+				<th>Tense</th>
+				<th>Add to the Front</th>
+			</tr>
+			<tr>
+				<th class="arabic">Past or Present</th>
+				<td class="pronunciation-note">Nothing</td>
+			</tr>
+			<tr>
+				<th class="arabic">Future</th>
+				<td>
+					<span class="arabic-char">‏سَـ</span><br/>
+					<span class="english-char">sa </span><span class="pronunciation-note">or</span><br/>
+					<span class="arabic-char">سَوْفَ‎</span><br/>
+					<span class="english-char">sawfa </span><span class="pronunciation-note">(separate word)</span>
 				</td>
 			</tr>
 		</table>
