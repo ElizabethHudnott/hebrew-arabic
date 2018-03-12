@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patterns</title>
+	<link rel="stylesheet" href="alphabet.css"/>
+</head>
+<body>
+<h1>Verbs</h1>
+<figure>
+	<table class="table">
+		<tr>
+			<th rowspan="4" class="thick-border">Person</th>
+			<th colspan="2" class="thick-border">Complete</th>
+			<th colspan="4" class="thick-border">Incomplete</th>
+		</tr>
+		<tr>
+			<th colspan="2" class="thick-border">Past</th>
+			<th colspan="2" class="thick-border">Present</th>
+			<th colspan="2" class="thick-border">Future</th>
+		</tr>
+		<tr>
+			<th colspan="6" class="thick-border">Singular</th>
+		</tr>
+		<tr>
+			<th>Masculine</th>
+			<th class="thick-border">Feminine</th>
+			<th>Masculine</th>
+			<th class="thick-border">Feminine</th>
+			<th>Masculine</th>
+			<th class="thick-border">Feminine</th>
+		</tr>
+		<tr>
+			<th class="thick-border">1st</th>
+			<td colspan="2" class="english-char thick-border">
+				I have <span class="big-placeholder"></span>
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				I am <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				I will <span class="big-placeholder"></span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">2nd</th>
+			<td colspan="2" class="english-char thick-border">
+				You have <span class="big-placeholder"></span>
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				You are <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td colspan="2" class="english-char thick-border">
+				You will <span class="big-placeholder"></span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">3rd</th>
+			<td class="english-char thick-border">
+				He has <span class="big-placeholder"></span>
+			</td>
+			<td class="english-char thick-border">
+				She has <span class="big-placeholder"></span>
+			</td>
+			<td class="english-char thick-border">
+				He is <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td class="english-char thick-border">
+				She is <span class="big-placeholder"></span>&ndash;ing
+			</td>
+			<td class="english-char thick-border">
+				He will <span class="big-placeholder"></span>
+			</td>
+			<td class="english-char thick-border">
+				She will <span class="big-placeholder"></span>
+			</td>
+		</tr>
+	</table>
+	<figcaption>Some English verb conjugations.</figcaption>
+</figure>
+
+<h2>Algorithm for Conjugating an Arabic Verb</h2>
+<ol>
+	<li>
+		<table class="table">
+			<tr>
+				<th>Tense</th>
+				<th>Add</th>
+			</tr>
+			<tr>
+				<th>Past or Present</th>
+				<td class="pronunciation-note">Nothing</td>
+			</tr>
+			<tr>
+				<th>Future</th>
+				<td>
+					<span class="arabic-char">‏سَـ</span><br/>
+					<span class="english-char">sa </span><span class="pronunciation-note">or</span><br/>
+					<span class="arabic-char">سَوْفَ‎</span><br/>
+					<span class="english-char">sawfa </span><span class="pronunciation-note">(separate word)</span>
+				</td>
+			</tr>
+		</table>
+	</li>
+	<li>
+		<table class="table same-height">
+			<tr>
+				<th rowspan="2">Tense</th>
+				<th rowspan="2">Person</th>
+				<th rowspan="2">Number</th>
+				<th rowspan="2">Gender</th>
+				<th colspan="2">Add</th>
+			</tr>
+			<tr>
+				<th>Arabic</th>
+				<th>Hebrew</th>
+			</tr>
+			<tr>
+				<th>Past</th>
+				<td colspan="3">&xrArr;</td>
+				<td colspan="2" class="pronunciation-note">Nothing</td>
+			</tr>
+			<tr>
+				<th rowspan="7">
+					Present or Future<br/>
+					<span class="th-note big">
+						&#x25cc;َ /
+						<span class="combo">&#x25cc;<span class="over" style="width:0.57em">&#x5b0;</span></span>
+					</span>
+				</th>
+				<th rowspan="2">1st</th>
+				<th>
+					Non-Plural<br/>
+					<span class="th-note">(singular)</span>
+				</th>
+				<td rowspan="2">&xrArr;</td>
+				<td>
+					<span class="arabic-char">أَ</span><br/>
+					<span class="english-char">ʼa</span>
+				</td>
+				<td>
+					<span class="hebrew-char">אֲ</span><br/>
+					<span class="english-char">ʼa</span>
+				</td>
+			</tr>
+			<tr>
+				<th>Plural</th>
+				<td>
+					<span class="arabic-char">نَـ</span><br/>
+					<span class="english-char">na</span>
+				</td>
+				<td>
+					<span class="hebrew-char">נְ</span><br/>
+					<span class="english-char">nĕ</span>
+				</td>
+			</tr>
+			<tr>
+				<th>2nd</th>
+				<td colspan="2">&xrArr;</td>
+				<td rowspan="2">
+					<span class="arabic-char">تَـ</span><br/>
+					<span class="english-char">ta</span>
+				</td>
+				<td rowspan="2">
+					<span class="hebrew-char">תְּ</span><br/>
+					<span class="english-char">tĕ</span>
+				</td>
+			</tr>
+			<tr>
+				<th rowspan="4">3rd</th>
+				<th rowspan="2">
+					Non-Plural<br/>
+					<span class="th-note">(singular or dual)</span>
+				</th>
+				<th>
+					Feminine<br/>
+					<span class="th-note big">תְּ</span>
+				</th>
+			</tr>
+			<tr>
+				<th rowspan="2">
+					Masculine<br/>
+					<span class="th-note big">
+						יְ / يَـ
+					</span>
+				</th>
+				<td rowspan="3">
+					<span class="arabic-char">يَـ</span><br/>
+					<span class="english-char">ya</span>
+				</td>
+				<td rowspan="2">
+					<span class="hebrew-char">יְ</span><br/>
+					<span class="english-char">yĕ</span>
+				</td>
+			</tr>
+			<tr>
+				<th rowspan="2">Plural</th>
+			</tr>
+			<tr>
+				<th>
+					Feminine<br/>
+					<span class="th-note big">תְּ</span>
+				</th>
+				<td>
+					<span class="hebrew-char">תְּ</span><br/>
+					<span class="english-char">tĕ</span>
+				</td>
+			</tr>
+		</table>
+		<p>
+			<strong>There are no verb conjugations specifically for 1st person dual.</strong>
+		</p>
+	</li>
+	<li>
+		<table class="table">
+			<tr>
+				<th>Tense</th>
+				<th>Person</th>
+				<th>Number</th>
+				<th>Gender</th>
+				<th>Add</th>
+			</tr>
+			<tr>
+				<th rowspan="6">Present or Future</th>
+				<th>1st</th>
+				<td colspan="2">&xrArr;</td>
+				<td rowspan="2">
+					<span class="arabic-char">&#x25cc;ُ</span><br/>
+					<span class="english-char">u</span>
+				</td>
+			</tr>
+			<tr>
+				<td>&xrArr;</td>
+				<th>Singular</th>
+				<td>&xrArr;</td>
+			</tr>
+			<tr>
+				<th>
+					2nd<br/>
+					<span class="th-note">(exception)</span>
+				</th>
+				<th>Singular</th>
+				<th>Feminine</th>
+				<td>
+					<span class="arabic-char">يْنَ&#x25cc;ِ</span><br/>
+					<span class="english-char"><span class="long">i</span>na</span>
+				</td>
+			</tr>
+			<tr>
+				<th rowspan="3">2nd or 3rd</th>
+				<th>Dual</th>
+				<td>&xrArr;</td>
+				<td>
+					<span class="arabic-char">اْنِ&#x25cc;َ</span><br/>
+					<span class="english-char"><span class="long">a</span>ni</span>
+				</td>
+			</tr>
+			<tr>
+				<th rowspan="2">Plural</th>
+				<th>Masculine</th>
+				<td>
+					<span class="arabic-char">وْنَ&#x25cc;ُ</span><br/>
+					<span class="english-char"><span class="long">u</span>na</span>
+				</td>
+			</tr>
+			<tr>
+				<th>Feminine</th>
+				<td>
+					<span class="arabic-char">نَ</span><br/>
+					<span class="english-char">na</span>
+				</td>
+			</tr>
+		</table>
+	</li>
+</ol>
+
+<figure>
+	<table class="table">
+		<tr>
+			<th rowspan="4" class="thick-border">Person</th>
+			<th colspan="2" class="thick-border">Usually Complete</th>
+			<th colspan="4" class="thick-border">Incomplete</th>
+		</tr>
+		<tr>
+			<th colspan="2" class="thick-border">Past</th>
+			<th colspan="2" class="thick-border">Present</th>
+			<th colspan="2" class="thick-border">Future</th>
+		</tr>
+		<tr>
+			<th>Masculine</th>
+			<th class="thick-border">Feminine</th>
+			<th>Masculine</th>
+			<th class="thick-border">Feminine</th>
+			<th>Masculine</th>
+			<th class="thick-border">Feminine</th>
+		</tr>
+		<tr>
+			<th colspan="6" class="thick-border">Singular</th>
+		</tr>
+		<tr>
+			<th class="thick-border">1st</th>
+			<td colspan="2" class="thick-border">
+				<span class="english-char">
+					<span class="big-placeholder"></span><span class="pattern">&ndash;tu</span>
+				</span>
+			</td>
+			<td colspan="2" class="thick-border">
+				<span class="english-char">
+					<span class="pattern">ʼa&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;u</span>
+				</span>
+			</td>
+			<td colspan="2" class="thick-border">
+				<span class="english-char">
+					<span class="pattern">saʼa&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;u</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">2nd</th>
+			<td>
+				<span class="english-char">
+					<span class="big-placeholder"></span><span class="pattern">&ndash;ta</span>
+				</span>
+			</td>
+			<td class="thick-border">
+				<span class="english-char">
+					<span class="big-placeholder"></span><span class="pattern">&ndash;ti</span>
+				</span>
+			</td>
+			<td>
+				<span class="english-char">
+					<span class="pattern">ta&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;u</span>
+				</span>
+			</td>
+			<td class="thick-border">
+				<span class="english-char">
+					<span class="pattern">ta&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;<span class="long">i</span>na</span>
+				</span>
+			</td>
+			<td>
+				<span class="english-char">
+					<span class="pattern">sata&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;u</span>
+				</span>
+			</td>
+			<td class="thick-border">
+				<span class="english-char">
+					<span class="pattern">sata&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;<span class="long">i</span>na</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">3rd</th>
+			<td>
+				<span class="english-char">
+					<span class="big-placeholder"></span><span class="pattern">&ndash;a</span>
+				</span>
+			</td>
+			<td class="thick-border">
+				<span class="english-char">
+					<span class="big-placeholder"></span><span class="pattern">&ndash;at</span>
+				</span>
+			</td>
+			<td>
+				<span class="english-char">
+					<span class="pattern">ya&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;u</span>
+				</span>
+			</td>
+			<td class="thick-border">
+				<span class="english-char">
+					<span class="pattern">ta&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;u</span>
+				</span>
+			</td>
+			<td>
+				<span class="english-char">
+					<span class="pattern">saya&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;u</span>
+				</span>
+			</td>
+			<td class="thick-border">
+				<span class="english-char">
+					<span class="pattern">sata&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;u</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="thick-border"></td>
+			<th colspan="6" class="thick-border">Dual</th>
+		</tr>
+		<tr>
+			<th class="thick-border">2nd</th>
+			<td colspan="2" class="thick-border">
+				<span class="english-char">
+					<span class="big-placeholder"></span><span class="pattern">&ndash;tum<span class="long">a</span></span>
+				</span>
+			</td>
+			<td colspan="2" class="thick-border">
+				<span class="english-char">
+					<span class="pattern">ta&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;<span class="long">a</span>ni</span>
+				</span>
+			</td>
+			<td colspan="2" class="thick-border">
+				<span class="english-char">
+					<span class="pattern">sata&ndash;</span><span class="big-placeholder"></span><span class="pattern">&ndash;<span class="long">a</span>ni</span>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<figcaption>Arabic verb conjugations.</figcaption>
+</figure>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</body>
+</html>
+‎

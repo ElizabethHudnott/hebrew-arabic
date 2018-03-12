@@ -142,7 +142,7 @@ table {
 
 .table td, .table th {
 	border: 1px solid #444444;
-	padding: 3px;
+	padding: 3px 5px 3px 5px;
 	text-align: center;
 }
 
@@ -358,6 +358,7 @@ figcaption {
 .pronunciation-note {
 	font-size: initial;
 	font-style: italic;
+	vertical-align: +2px;
 }
 
 .combo {
@@ -429,6 +430,7 @@ table .no-b, .no-b {
 .references {
 	list-style-type: none;
 }
+
 .references li {
 	margin-top: 0.5em;
 }
@@ -445,4 +447,38 @@ table .no-b, .no-b {
 	font-family: monospace;
 	font-size: 150%;
 	letter-spacing: 2px;
+}
+
+.placeholder {
+	font-style: italic;
+}
+
+.pattern {
+	color: red;
+	font-weight: bold;
+}
+
+.big-placeholder {
+	background-color: DarkKhaki;
+	display: inline-block;
+	height: 1.85ex;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: text-bottom;
+	width: 3em;
+}
+
+.th-note {
+	font-style: italic;
+	font-weight: normal;
+}
+
+.th-note.big {
+	font-size: 150%;
+	font-style: normal;
+}
+
+.same-height .hebrew-char {
+	display: inline-block;
+	margin-bottom: 0.25em;
 }
