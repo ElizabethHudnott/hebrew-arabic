@@ -38,9 +38,12 @@ hebrewOverrides.set('q', 'q');
 function transcribeBoth(language, transcription) {
 	var output = '';
 	var startOfSyllable = true;
-	var endOfSyllable;
+	var endOfSyllable, phone;
 	for (let i = 0; i < transcription.length; i++) {
 		let items = transcription[i];
+		if ((phone === undefined || phone === ' ') && items[0] === 'ʼ') {
+			items.shift();
+		}
 		output = output + `<td colspan="${items.length}" class="english-char`;
 		endOfSyllable = false;
 		if (items[1] == 'e.') {
@@ -60,7 +63,7 @@ function transcribeBoth(language, transcription) {
 		}
 		output = output + '">';
 
-		for (let phone of items) {
+		for (phone of items) {
 			var html = undefined;
 			if (language == 'hebrew') {
 				html = hebrewOverrides.get(phone);
