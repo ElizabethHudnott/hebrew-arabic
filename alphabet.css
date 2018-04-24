@@ -210,9 +210,10 @@ h2 .big {
 
 .long {
 	border-top-style: solid;
-	border-top-width: 0.1em;
+	border-top-width: 0.09em;
 	display: inline-block;
 	line-height: 0.9;
+	margin-left: 0.05em;
 	min-width: 0.5em;
 	text-align: center;
 }
