@@ -212,9 +212,9 @@ h2 .big {
 	border-top-style: solid;
 	border-top-width: 0.09em;
 	display: inline-block;
-	line-height: 0.9;
+	line-height: 0.55;
 	margin-left: 0.05em;
-	min-width: 0.5em;
+	min-width: 0.4em;
 	text-align: center;
 }
 
