@@ -150,6 +150,10 @@ table {
 	font-size: 300%;
 }
 
+.phoneme-table .arabic-char {
+	font-size: 200%;
+}
+
 .hebrew-char {
 	font-size: 260%;
 }
