@@ -500,3 +500,7 @@ table .no-b, .no-b {
 .strong {
 	font-weight: bold;
 }
+
+.english-vowel {
+	font-variant: small-caps;
+}

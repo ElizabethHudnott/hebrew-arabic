@@ -1,0 +1,87 @@
+X				base noun
+Xs				more than one X
+Xing			to use an X
+unXing			to reverse the result of Xing
+multiXing		to use several Xs at once
+Xwise			doing something else using an X
+Xmaking			to make an X
+Xment			the result of Xing
+Xmaker			a person who makes Xs
+Xer				a person who uses Xs
+autoXmaker		a program or machine that makes Xs
+autoXer			a program or machine that performs Xing
+Xfuller			a person who uses Xs to good effect
+Xmakerfuller	a person who changes the world by making Xs
+Xphile			a person who loves Xs
+Xaholic			a person obsessed with Xs
+Xdom			the place where Xs reside
+eX				an electronic imitation of an X
+bioX			an X made using biological material
+Xertool			the tool most commonly used in conjunction with an X
+eXertool		the tool most commonly used in conjunction with eXs
+Xmakey			the tool most commonly with the manufacture or crafting of Xs
+Xic				to be like an X
+Xlet			something with some qualities like an X but differing substantially in others
+Xingly			to do something in a fashion resembling Xs or Xing
+Xacy			the result of lots of Xing
+Xmakeracy		the result of having a society with lots of Xs and where many people participate in the production of Xs
+Xism			the belief that Xing is a good thing
+Xmakerism		the belief that Xmaking is a good thing
+Xen				to change a person or a thing using an X
+Xify			to create a representation of something in the form of an X
+Xable			capable of having Xing and/or Xmaking applied to it
+Xless			a state of not possessing any Xs
+Xcracy			a state where Xs give you power
+Xcycling		transforming an X into another X (possibly via some intermediaries)
+Xcycle			the transformation process whereby an X into another X (possibly via some intermediaries)
+Xectomy			removing one or more Xs from available use
+Xology			the study of Xs
+Xonym			a title given to an X
+Xopsy			examination of an X
+Xphobia			fear or hatred of Xs
+Xship
+Xmakership
+Xsophy
+Xtrophy
+Xatrophy
+Xphilia
+
+book			book
+books			books
+booking			reading
+unbooking		forgetting something you read in a book or newly discovering something that renders a book inaccurate
+multibooking	reading around a topic
+bookwise		from a book, following a recipe, etc.
+bookmaking		authoring, bookmaking (not gambling), printing
+bookment		a recitation of something from a book or an understanding of something written in a book
+bookmaker		author, publisher, bookmaker (not gambling)
+booker			reader
+autobookmaker	printing press
+bookfuller		learned person
+bookmakerfuller	a persuasive, notable or influential writer
+bookphile		bibliophile
+bookaholic		someone addicted to reading books
+bookdom			library, bookshelf
+bookertool		bookmark (physical or computer)
+ebookertool		ereading device
+bookmakey		keyboard, pen
+bookic			substantial, comprehensive or encyclopaedic, instructive, knowledgeable, repeatable, explicitly defined
+booklet			booklet
+bookingly		systematically, liturgically
+bookacy			education through reading
+bookmakeracy	a state where 'absurd' but worthwhile levels of detail are available in written documents that wouldn't be available in a society with a tendency to do less writing and also a society where the average person is expected to take part in the production of books (Wikipedia anyone?)
+bookism			intellectualism
+bookmakerism	a belief that writing books is a good thing. See bookmakeracy
+booken			to learn through reading (applied to a person), to refine something using knowledge from a book (applied to an object)
+bookify			to transcribe, give an account of, take notes on, to document something
+bookable		the quality of being recordable in written form
+bookless		lacking books
+bookcracy		knowledge economy
+bookcycle		editing, making a 2nd edition
+bookectomy		library closures, destruction of books, theft of a book, a book being temporarily  or permanently inaccessible
+bookology		the field of literary criticism
+bookonym		a book title
+bookopsy		a critique or review of a book
+bookphobia		hatred of books
+ebook			ebook
+biobook			all books except ebooks and stone tablets are biobooks!
