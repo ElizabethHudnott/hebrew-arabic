@@ -1,44 +1,44 @@
-X				base noun
-Xs				more than one X
-Xing			to use an X
-unXing			to reverse the result of Xing
-multiXing		to use several Xs at once
-Xwise			doing something else using an X
-Xmaking			to make an X
-Xment			the result of Xing
-Xmaker			a person who makes Xs
-Xer				a person who uses Xs
-autoXmaker		a program or machine that makes Xs
-autoXer			a program or machine that performs Xing
-Xfuller			a person who uses Xs to good effect
-Xmakerfuller	a person who changes the world by making Xs
-Xphile			a person who loves Xs
-Xaholic			a person obsessed with Xs
-Xdom			the place where Xs reside
-eX				an electronic imitation of an X
-bioX			an X made using biological material
-Xertool			the tool most commonly used in conjunction with an X
-eXertool		the tool most commonly used in conjunction with eXs
-Xmakey			the tool most commonly with the manufacture or crafting of Xs
-Xic				to be like an X
-Xlet			something with some qualities like an X but differing substantially in others
-Xingly			to do something in a fashion resembling Xs or Xing
-Xacy			the result of lots of Xing
-Xmakeracy		the result of having a society with lots of Xs and where many people participate in the production of Xs
-Xism			the belief that Xing is a good thing
-Xmakerism		the belief that Xmaking is a good thing
-Xen				to change a person or a thing using an X
-Xify			to create a representation of something in the form of an X
-Xable			capable of having Xing and/or Xmaking applied to it
-Xless			a state of not possessing any Xs
-Xcracy			a state where Xs give you power
-Xcycling		transforming an X into another X (possibly via some intermediaries)
-Xcycle			the transformation process whereby an X into another X (possibly via some intermediaries)
-Xectomy			removing one or more Xs from available use
-Xology			the study of Xs
-Xonym			a title given to an X
-Xopsy			examination of an X
-Xphobia			fear or hatred of Xs
+X				n.		base noun
+Xs				n.		more than one X
+Xing			v.		to use an X
+unXing			v.		to reverse the result of Xing
+multiXing		v.		to use several Xs at once
+Xwise			instrumental adjunct doing something else using an X
+Xmaking			v.		to make an X
+Xment			v.n.	the result of Xing
+Xmaker			n.		a person who makes Xs
+Xer				n.		a person who uses Xs
+autoXmaker		n.		a program or machine that makes Xs
+autoXer			n.		a program or machine that performs Xing
+Xfuller			n.		a person who uses Xs to good effect
+Xmakerfuller	n.		a person who changes the world by making Xs
+Xphile			n.		a person who loves Xs
+Xaholic			n.		a person obsessed with Xs
+Xdom			n.		the place where Xs reside
+eX				n.		an electronic imitation of an X
+bioX			n.		an X made using biological material
+Xertool			n.		the tool most commonly used in conjunction with an X
+eXertool		n.		the tool most commonly used in conjunction with eXs
+Xmakey			n.		the tool most commonly with the manufacture or crafting of Xs
+Xic				adj.	to be like an X
+Xlet			n.		something with some qualities like an X but differing substantially in others
+Xingly			advb.	to do something in a fashion resembling Xs or Xing
+Xacy			n.		the result of lots of Xing
+Xmakeracy		n.		the result of having a society with lots of Xs and where many people participate in the production of Xs
+Xism			n.		the belief that Xing is a good thing
+Xmakerism		n.		the belief that Xmaking is a good thing
+Xen				v.		to change a person or a thing using an X
+Xify			v.		to create a representation of something in the form of an X
+Xable			adj.	capable of having Xing and/or Xmaking applied to it
+Xless			adj.	a state of not possessing any Xs
+Xcracy			n.		a state where Xs give you power
+Xcycling		v.		transforming an X into another X (possibly via some intermediaries)
+Xcycle			n.		the transformation process whereby an X into another X (possibly via some intermediaries)
+Xectomy			v.n.	removing one or more Xs from available use
+Xology			n.		the study of Xs
+Xonym			n.		a title given to an X
+Xopsy			v.n.	examination of an X
+Xphobia			n.		fear or hatred of Xs
 Xship
 Xmakership
 Xsophy

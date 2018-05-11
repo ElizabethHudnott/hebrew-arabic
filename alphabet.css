@@ -504,3 +504,12 @@ table .no-b, .no-b {
 .english-vowel {
 	font-variant: small-caps;
 }
+
+summary h1, summary h2 {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+summary {
+	cursor: pointer;
+}
