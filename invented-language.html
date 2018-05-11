@@ -11,7 +11,7 @@
 </p>
 
 <p>
-	This article doesn't deal with vocabulary. All words given are either English words or else nonsensical terms like <i>1es</i>, both of which are used as placeholders for the real ElizaLang words. This article also doesn't deal with the ElizaLang alphabet, punctuation marks or the shapes of the diacritical marks. Presently the letters are identified by their transcriptions into English only. The ElizaLang alphabet is a full alphabet though! That is, the vowels are given their own letters, rather than being diacritic marks like the short vowels in Arabic.
+	This article doesn't deal with vocabulary. All words given are either English words or else nonsensical terms like <i>1es</i>, both of which are used as placeholders for the real ElizaLang words. This article also doesn't deal with the ElizaLang alphabet, punctuation marks or the shapes of the diacritical marks. Presently the letters are identified by their transcriptions into English only. The ElizaLang alphabet is a full alphabet though! That is, the vowels are given their own letters, rather than being diacritic marks like the short vowels in Arabic. There is no notion of capital and lower case letters though.
 </p>
 
 <details>
@@ -328,89 +328,133 @@
 </details>
 
 <details>
+	<summary><h1>Sentence Structure</summary>
+
+	<h2>Word Order</h2>
+	<p>
+		ElizaLang is mostly a head-first language. It follows the verb–subject–object (VSO), possessed–possessor (NG) and noun–adjective (NA) rules.
+	</p>
+
+	<h2>Markers</h2>
+	<p>
+		Adverbs and adjectives are marked with a consistent suffix to indicate their status as modifiers to a verb and to a noun respectively.
+	</p>
+
+	<h2>Omitting the Subject (Null-Subject &amp; Topicization)</h2>
+	<p>
+		The subject of a sentence can be omitted, in which case the subject is last subject or object noun phrase that included some special word in some previous sentence. Let's call that special word "topic".  The topic defaults to the subject of the first sentence if no topic has been explicitly introduced yet, and defaults to the first person exclusive singular if the subject is omitted from the first sentence.
+	</p>
+	<ul>
+		<li>"ran" &rarr; I ran.</li>
+		<li>"ran you" &rarr; You ran.</li>
+		<li>"ran you. jumped." &rarr; You ran. You jumped.</li>
+		<li>"walked. ran you. jumped." &rarr; I walked. You ran. I jumped.</li>
+		<li>"walked. ran you topic. jumped." &rarr; I walked. You ran. You jumped.</li>
+		<li>"walked. ran you topic. jumped I. fell. hurt" &rarr; I walked. You ran. I jumped. You fell. You hurt.</li>
+	</ul>
+</details>
+
+<details>
 	<summary><h1>Gender</h1></summary>
 	<p>
-		Nouns are not declined by gender and verbs are not conjugated by gender in ElizaLang. Words don't have genders!
+		In ElizaLang nouns are not declined by gender and verbs are not conjugated by gender. Objects don't have genders and people shouldn't be judged by their genders!
 	</p>
 </details>
 
 <details>
-	<summary><h1>Subject &amp; Object: Person, Number &amp; Clusivity</h1></summary>
-	<figure id="fig-pronouns">
-		<table class="table">
-			<tr>
-				<th colspan="2">Person</th>
-				<th>Singular</th>
-				<th>Dual</th>
-				<th>Plural</th>
-				<th>Unknown</th>
-			</tr>
-			<tr>
-				<th rowspan="2">1st person</th>
-				<td>exclusive</td>
-				<td>1es</td>
-				<td>1ed</td>
-				<td>1ep</td>
-				<td>1eu</td>
-			</tr>
-			<tr>
-				<td>inclusive</td>
-				<td>&ndash;</td>
-				<td>1id</td>
-				<td>1ip</td>
-				<td>1iu</td>
-			</tr>
-			<tr>
-				<th colspan="2">2nd person</th>
-				<td>2s</td>
-				<td>2d</td>
-				<td>2p</td>
-				<td>2u</td>
-			</tr>
-			<tr>
-				<th rowspan="2">3rd person</th>
-				<td>animate</td>
-				<td>3as</td>
-				<td>3ad</td>
-				<td>3ap</td>
-				<td>3au</td>
-			</tr>
-			<tr>
-				<td>inanimate</td>
-				<td>3is</td>
-				<td>3id</td>
-				<td>3ip</td>
-				<td>3iu</td>
-			</tr>
-			<tr>
-				<th colspan="2">Generic person</th>
-				<td>gs</td>
-				<td>gd</td>
-				<td>gp</td>
-				<td>&ndash;</td>
-			</tr>
-		</table>
-		<figcaption>Possible ElizaLang pronoun constructions.</figcaption>
-	</figure>
+	<summary><h1>Number</h1></summary>
 	<p>
-		Additionally, the subject can be omitted if the sentence has the same subject as the previous sentence, known as the <dfn>null subject</dfn>.  The "Unknown" number can also be used in the first person when the number is in fact known but the author wishes to leave it unspecified because the number of people may change over time, such as if additional people subsequently join a team to document ElizaLang, <em>c.f. the Royal "We"</em>. An example of an unknown number of inanimate objects is an <em>uncountable noun</em>. The generic person dual refers specifically to the concept of married couples.
+		Nouns are followed by quantifiers. For example:
 	</p>
+	<ul>
+		<li>"cat two" &rarr; two cats</li>
+		<li>"cat some" &rarr; cats</li>
+	</ul>
 	<p>
-		Although there are a lot of pronouns, those that share the same column in <a href="#fig-pronouns" class="xref"></a> will share the same suffix and pronouns that appear on the same row will share a common prefix.
+		If no quantifier is given then the quantity one is assumed, so "cat" without a quantifier signifies one cat.
 	</p>
 </details>
 
 <details>
 	<summary><h1>Articles</h1></summary>
 	<p>
-		ElizaLang doesn't have any articles. To say, "The <var>X</var>", you just say, "<var>X</var>". To say, "A <var>X</var>", or, "An <var>X</var>", you say, "One <var>X</var>", though of course we haven't introduced the word for "One" yet.
+		ElizaLang has one article, the definite article. The definite article comes before the noun. The presence of a quantity without the definite articles marks indefiniteness, but the definite article can be omitted when the number is also omitted.
+	</p>
+	<ul>
+		<li>"cat one"" &rarr; a cat</li>
+		<li>"cat" &rarr; the cat</li>
+		<li>"cat two" &rarr; two cats</li>
+		<li>"the cat two" &rarr; the two cats</li>
+		<li>"the cat some" &rarr; the cats</li>
+	</ul>
+	<p>
+		The words "one", "some" and "the" are replaced by prefixes and suffixes in the actual language (-un, -im, ha-).
 	</p>
 </details>
 
 <details>
-	<summary><h1>Sentence Structure</summary>
+	<summary><h1>Subject &amp; Object: Person, Number &amp; Clusivity</h1></summary>
 	<p>
-		ElizaLang is a VSO language.
+		The pronoun combinations currently being considered for inclusion into ElizaLang are:
+	</p>
+	<table class="table">
+		<tr>
+			<th colspan="2">Person</th>
+			<th>Singular</th>
+			<th>Dual</th>
+			<th>Plural</th>
+			<th>Unknown</th>
+		</tr>
+		<tr>
+			<th rowspan="2">1st person</th>
+			<td>exclusive</td>
+			<td>1es</td>
+			<td>1ed</td>
+			<td>1ep</td>
+			<td>1eu</td>
+		</tr>
+		<tr>
+			<td>inclusive</td>
+			<td>&ndash;</td>
+			<td>1id</td>
+			<td>1ip</td>
+			<td>1iu</td>
+		</tr>
+		<tr>
+			<th colspan="2">2nd person</th>
+			<td>2s</td>
+			<td>2d</td>
+			<td>2p</td>
+			<td>2u</td>
+		</tr>
+		<tr>
+			<th rowspan="2">3rd person</th>
+			<td>animate</td>
+			<td>3as</td>
+			<td>3ad</td>
+			<td>3ap</td>
+			<td>3au</td>
+		</tr>
+		<tr>
+			<td>inanimate</td>
+			<td>3is</td>
+			<td>3id</td>
+			<td>3ip</td>
+			<td>3iu</td>
+		</tr>
+		<tr>
+			<th colspan="2">Indefinite person</th>
+			<td>gs</td>
+			<td>&ndash;</td>
+			<td>gp</td>
+			<td>&ndash;</td>
+		</tr>
+	</table>
+	<p>
+		The unknown number can also be used in the first person when the number is in fact known but the author wishes to leave it unspecified because the number of people may change over time, such as if additional people join a team to start writing in ElizaLang, <em>c.f. the Royal "We"</em>.
+	</p>
+	<p>
+		Unlike English, pronouns in ElizaLang will remain the same in both the subject and the object positions, rather than creating constructions like, "He played him". In ElizaLang this would take the form, "Played 3as 3as." There will however be a morpheme similar to the English <i>-self</i> or <i>-selves</i> in order to create reflexive pronouns.
 	</p>
 </details>
 
