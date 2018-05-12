@@ -331,18 +331,22 @@
 	<summary><h1>Sentence Structure</summary>
 
 	<h2>Word Order</h2>
-	<p>
-		ElizaLang is mostly a head-first language. It follows the verb–subject–object (VSO), possessed–possessor (NG) and noun–adjective (NA) rules.
-	</p>
+	ElizaLang is a consistently head-first language.
+	<ul>
+		<li>Verb–Subject–Object (VSO)</li>
+		<li>Possessed–Possessor (NG)</li>
+		<li>Noun–Adjective (NA)</li>
+		<li>Noun-Quantifier</li>
+	</ul>
 
 	<h2>Markers</h2>
 	<p>
-		Adverbs and adjectives are marked with a consistent suffix to indicate their status as modifiers to a verb and to a noun respectively.
+		Adverbs and adjectives are consistently marked with an identical suffix to indicate their status as modifiers to a verb and to a noun respectively.
 	</p>
 
 	<h2>Omitting the Subject (Null-Subject &amp; Topicization)</h2>
 	<p>
-		The subject of a sentence can be omitted, in which case the subject is last subject or object noun phrase that included some special word in some previous sentence. Let's call that special word "topic".  The topic defaults to the subject of the first sentence if no topic has been explicitly introduced yet, and defaults to the first person exclusive singular if the subject is omitted from the first sentence.
+		The subject of a sentence can be omitted, in which case the subject is last subject or object noun phrase that included a special word in some previous sentence. Let's call that special word "topic".  The topic defaults to the subject of the first sentence if no topic has been explicitly introduced yet, and defaults to the first person exclusive singular if the subject is omitted from the first sentence.
 	</p>
 	<ul>
 		<li>"ran" &rarr; I ran.</li>
@@ -362,38 +366,31 @@
 </details>
 
 <details>
-	<summary><h1>Number</h1></summary>
+	<summary><h1>Number &amp; Definiteness</h1></summary>
 	<p>
-		Nouns are followed by quantifiers. For example:
+		Nouns come before quantifiers. For example, "cat two" would mean "two cats" if the word "cat" meant what does in English. If no quantifier is given then the quantifier "one" is assumed. Nouns are declined by definiteness and by number (singular or plural).
 	</p>
-	<ul>
-		<li>"cat two" &rarr; two cats</li>
-		<li>"cat some" &rarr; cats</li>
-	</ul>
-	<p>
-		If no quantifier is given then the quantity one is assumed, so "cat" without a quantifier signifies one cat.
-	</p>
+	<table class="table">
+		<tr>
+			<th>Number</th>
+			<th>Definite</th>
+			<th>Indefinite</th>
+		</tr>
+		<tr>
+			<th>Singular</th>
+			<td></td>
+			<td class="english-char">-un</td>
+		</tr>
+		<tr>
+			<th>Plural</th>
+			<td class="english-char">-<span class="long">i</span>m</td>
+			<td class="english-char">-<span class="long">u</span>na</td>
+		</tr>
+	</table>
 </details>
 
 <details>
-	<summary><h1>Articles</h1></summary>
-	<p>
-		ElizaLang has one article, the definite article. The definite article comes before the noun. The presence of a quantity without the definite articles marks indefiniteness, but the definite article can be omitted when the number is also omitted.
-	</p>
-	<ul>
-		<li>"cat one"" &rarr; a cat</li>
-		<li>"cat" &rarr; the cat</li>
-		<li>"cat two" &rarr; two cats</li>
-		<li>"the cat two" &rarr; the two cats</li>
-		<li>"the cat some" &rarr; the cats</li>
-	</ul>
-	<p>
-		The words "one", "some" and "the" are replaced by prefixes and suffixes in the actual language (-un, -im, ha-).
-	</p>
-</details>
-
-<details>
-	<summary><h1>Subject &amp; Object: Person, Number &amp; Clusivity</h1></summary>
+	<summary><h1>Pronouns: Person, Number &amp; Clusivity</h1></summary>
 	<p>
 		The pronoun combinations currently being considered for inclusion into ElizaLang are:
 	</p>
@@ -456,6 +453,30 @@
 	<p>
 		Unlike English, pronouns in ElizaLang will remain the same in both the subject and the object positions, rather than creating constructions like, "He played him". In ElizaLang this would take the form, "Played 3as 3as." There will however be a morpheme similar to the English <i>-self</i> or <i>-selves</i> in order to create reflexive pronouns.
 	</p>
+</details>
+
+<details>
+	<summary><h1>Conjunctions, Disjunctions and Negation</h1></summary>
+<pre>
+FORMULA -> IMPLICATION | FORMULA'
+IMPLICATION -> if FORMULA' then FORMULA'
+FORMULA' -> TERM | CONJUNCTION | DISJUNCTION
+
+NEGATION -> not xP
+
+CONJUNCTION -> and CONJUNCT CONJUNCT+
+CONJUNCT -> xP | NEGATION | DISJUNCTIVE_CONJUNCT | NEGATED_CONJUNCT
+
+DISJUNCTIVE_CONJUNCT -> DISJUNCTION_WORD TERM TERM+
+DISJUNCTION_WORD -> or | xor
+TERM -> xP | NEGATION
+NEGATED_CONJUNCT -> nor xP xP+
+
+DISJUNCTION -> DISJUNCTION_WORD DISJUNCT DISJUNCT+
+DISJUNCT -> xP | NEGATION | CONJUNCTIVE_DISJUNCT | NEGATED_DISJUNCT
+CONJUNCTIVE_DISJUNCT -> and TERM TERM+
+NEGATED_DISJUNCT -> nand xP xP+
+</pre>
 </details>
 
 <div>
