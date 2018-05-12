@@ -457,26 +457,53 @@
 
 <details>
 	<summary><h1>Conjunctions, Disjunctions and Negation</h1></summary>
+	<p>
+		If <code>xP</code> stands for any noun phrase then lists of things are described by the following grammar. Double negations are forbidden.
+	</p>
 <pre>
-FORMULA -> IMPLICATION | FORMULA'
-IMPLICATION -> if FORMULA' then FORMULA'
-FORMULA' -> TERM | CONJUNCTION | DISJUNCTION
-
+FORMULA -> TERM | CONJUNCTION | DISJUNCTION
+TERM -> xP | NEGATION
 NEGATION -> not xP
 
-CONJUNCTION -> and CONJUNCT CONJUNCT+
-CONJUNCT -> xP | NEGATION | DISJUNCTIVE_CONJUNCT | NEGATED_CONJUNCT
-
+CONJUNCTION -> and TERM TERM COMPOUND_CONJUNCT*
+CONJUNCTION -> and TERM COMPOUND_CONJUNCT+
+CONJUNCTION -> and COMPOUND_CONJUNCT COMPOUND_CONJUNCT+
+COMPOUND_CONJUNCT -> CONJUNCTIVE_CONJUNCT | DISJUNCTIVE_CONJUNCT | NEGATED_DISJUNCT
+CONJUNCTIVE_CONJUNCT -> and TERM TERM+
 DISJUNCTIVE_CONJUNCT -> DISJUNCTION_WORD TERM TERM+
 DISJUNCTION_WORD -> or | xor
-TERM -> xP | NEGATION
-NEGATED_CONJUNCT -> nor xP xP+
+NEGATED_DISJUNCT -> nor xP xP+
 
-DISJUNCTION -> DISJUNCTION_WORD DISJUNCT DISJUNCT+
-DISJUNCT -> xP | NEGATION | CONJUNCTIVE_DISJUNCT | NEGATED_DISJUNCT
+DISJUNCTION -> DISJUNCTION_WORD TERM TERM COMPOUND_DISJUNCT*
+DISJUNCTION -> DISJUNCTION_WORD TERM COMPOUND_DISJUNCT+
+DISJUNCTION -> DISJUNCTION_WORD COMPOUND_DISJUNCT COMPOUND_DISJUNCT+
+COMPOUND_DISJUNCT -> CONJUNCTIVE_DISJUNCT | NEGATED_CONJUNCT
 CONJUNCTIVE_DISJUNCT -> and TERM TERM+
-NEGATED_DISJUNCT -> nand xP xP+
+NEGATED_CONJUNCT -> nand xP xP+
 </pre>
+
+	<p>
+		Some examples of valid sentences:
+	</p>
+	<ul>
+		<li>come not alice &rarr; Alice doesn't come.</li>
+		<li>come and alice bob &rarr; Alice and Bob come.</li>
+		<li>come or alice bob &rarr; Alice or Bob come.</li>
+		<li>come and eve or alice bob &rarr; Eve and (Alice or Bob) come.</li>
+		<li>come and or eve billy or alice bob &rarr; (Eve or Billy) and (Alice or Bob) come.</li>
+	</ul>
+
+	<p>
+		If <code>xP</code> stands for any sentence then the following grammar produces conditional sentences.
+	</p>
+<pre>
+SENTENCE_FORMULA -> FORMULA | IMPLICATION | IMPLICATION_CONJUNCTION | IMPLICATION_DISJUNCTION
+
+IMPLICATION -> if FORMULA then FORMULA
+IMPLICATION_CONJUNCTION -> and IMPLICATION IMPLICATION+
+IMPLICATION_DISJUNCTION -> or IMPLICATION IMPLICATION+
+</pre>
+
 </details>
 
 <div>
