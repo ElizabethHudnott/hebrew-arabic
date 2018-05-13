@@ -465,7 +465,7 @@
 </details>
 
 <details>
-	<summary><h1>Conjunctions, Disjunctions and Negation</h1></summary>
+	<summary><h1>Quantities, Sets Operators &amp; Predicates</h1></summary>
 	<p>
 		If <code>xP</code> stands for any noun phrase without a quantifier then lists of things are described by the following grammar. Double negations are forbidden.
 	</p>
@@ -518,7 +518,206 @@ IMPLICATION -> if FORMULA then FORMULA
 IMPLICATION_CONJUNCTION -> and IMPLICATION IMPLICATION+
 IMPLICATION_DISJUNCTION -> or IMPLICATION IMPLICATION+
 </pre>
+</details>
 
+<details>
+	<summary><h1>Counting</h1></summary>
+	<p>
+		The counting system is base twelve and positional. There are distinct words and numerical digits for the numbers zero to eleven. As usual the actual words haven't been decided yet. There are also special words for numbers of the form 12<sup><var>n</var></sup> for <var>n</var>&nbsp;&isin; 3..11. These are formed by inflecting the word for <var>n</var> in some way. For now let's use the suffix <i>ni</i>, though the actual suffix hasn't been decided yet. So, threeni represents 12<sup>3</sup>, fourni represents 12<sup>4</sup>, and so on.
+	</p>
+
+	<ol>
+		<li>
+			To represent an integer between zero and eleven use the dedicated word for that number.
+		</li>
+		<li>
+			To represent an integer between 12<sub>10</sub> and 1727<sub>10</sub> (=12<sup>3</sup>&nbsp;- 1), or equivalently between 10<sub>12</sub> and BBB<sub>12</sub>: take each numerical digit separately in order of most significant to least significant and output the dedicated word for the number corresponding to each digit.
+		</li>
+		<li>
+			To represent an integer <var>x</var> larger than BBB<sub>12</sub>:
+			<ol>
+				<li>
+					Truncate <var>x</var> to three significant figures (in base twelve) to obtain <var>x&prime;</var>.
+				</li>
+				<li>
+					Identify the maximum possible integer <var>n</var>&nbsp;&isin; 3..11 and integers <var>m</var>&nbsp;&isin; 1..11 and <var>r</var>&nbsp;&isin; 0..12<sup>n</sup>-1 such that <var>x&prime;</var>&nbsp;= <var>m</var>&nbsp;&times; 12<sup><var>n</var></sup>&nbsp;+ <var>r</var>.
+				</li>
+				<li>
+					If <var>m</var>&nbsp;&ne;&nbsp;1 then output the word for <var>m</var>.
+				</li>
+				<li>
+					Output the inflected word for <var>n</var>.
+				</li>
+				<li>
+					If <var>r</var>&nbsp;&ne;&nbsp;0:
+					<ol>
+						<li>
+							Taking each numerical digit of <var>r</var> separately,
+						</li>
+						<li>
+							drop any zero digits in the least significant positions so that the resulting list of digits doesn't end in a 0, and,
+						</li>
+						<li>
+							output a word for each remaining digit in order of most significant to least significant by outputting the dedicated word for the number corresponding to that digit.
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+	</ol>
+
+	<table class="table">
+		<tr>
+			<th colspan="2">Number</th>
+			<th rowspan="2">Words</th>
+		</tr>
+		<tr>
+			<th>Base 12</th>
+			<th>Base 10</th>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>zero</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>1</td>
+			<td>one</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>2</td>
+			<td>two</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>9</td>
+			<td>nine</td>
+		</tr>
+		<tr>
+			<td>A</td>
+			<td>10</td>
+			<td>ten</td>
+		</tr>
+		<tr>
+			<td>B</td>
+			<td>11</td>
+			<td>eleven</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>12</td>
+			<td>one zero</td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>13</td>
+			<td>one one</td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>14</td>
+			<td>one two</td>
+		</tr>
+		<tr>
+			<td>1B</td>
+			<td>23</td>
+			<td>one eleven</td>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td>24</td>
+			<td>two zero</td>
+		</tr>
+		<tr>
+			<td>21</td>
+			<td>25</td>
+			<td>two one</td>
+		</tr>
+		<tr>
+			<td>22</td>
+			<td>26</td>
+			<td>two two</td>
+		</tr>
+		<tr>
+			<td>2B</td>
+			<td>35</td>
+			<td>two eleven</td>
+		</tr>
+		<tr>
+			<td>30</td>
+			<td>36</td>
+			<td>three zero</td>
+		</tr>
+		<tr>
+			<td>BBB</td>
+			<td>1727</td>
+			<td>eleven eleven eleven</td>
+		</tr>
+		<tr>
+			<td>1000</td>
+			<td>1728</td>
+			<td>threeni</td>
+		</tr>
+		<tr>
+			<td>1010</td>
+			<td>1740</td>
+			<td>threeni zero one</td>
+		</tr>
+		<tr>
+			<td>1020</td>
+			<td>1752</td>
+			<td>threeni zero two</td>
+		</tr>
+		<tr>
+			<td>10B0</td>
+			<td>1860</td>
+			<td>threeni zero eleven</td>
+		</tr>
+		<tr>
+			<td>1100</td>
+			<td>1872</td>
+			<td>threeni one</td>
+		</tr>
+		<tr>
+			<td>1110</td>
+			<td>1884</td>
+			<td>threeni one one</td>
+		</tr>
+		<tr>
+			<td>1BB0</td>
+			<td>3444</td>
+			<td>threeni eleven eleven</td>
+		</tr>
+		<tr>
+			<td>2000</td>
+			<td>3456</td>
+			<td>two threeni</td>
+		</tr>
+		<tr>
+			<td>2010</td>
+			<td>3468</td>
+			<td>two threeni zero one</td>
+		</tr>
+		<tr>
+			<td>BBB0</td>
+			<td>20,724</td>
+			<td>eleven threeni eleven eleven</td>
+		</tr>
+		<tr>
+			<td>10,000</td>
+			<td>20,736</td>
+			<td>fourni </td>
+		</tr>
+		<!--
+		<tr>
+			<td></td>
+			<td></td>
+			<td>threeni </td>
+		</tr>
+		-->
+	</table>
 </details>
 
 <div>
