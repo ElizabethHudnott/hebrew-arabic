@@ -537,10 +537,20 @@ IMPLICATION_DISJUNCTION -> or IMPLICATION IMPLICATION+
 			To represent an integer <var>x</var> larger than BBB<sub>12</sub>:
 			<ol>
 				<li>
-					Truncate <var>x</var> to three significant figures (in base twelve) to obtain <var>x&prime;</var>.
+					<p>
+						Truncate <var>x</var> to three significant figures (in base twelve) to obtain <var>x&prime;</var>.
+					</p>
+					<aside>
+						Technically this step is optional, but in ElizaLang it's highly, highly unusual to read aloud or write out long strings of numbers like we have in English, for example, seven hundred and sixty-eight thousand five hundred and thirty-nine.  It's unusual to the point of being insulting. Although in English we seldom write out long sequences of words like this we do use them in speech.
+					</aside>
 				</li>
 				<li>
-					Identify the maximum possible integer <var>n</var>&nbsp;&isin; 3..11 and integers <var>m</var>&nbsp;&isin; 1..11 and <var>r</var>&nbsp;&isin; 0..12<sup>n</sup>-1 such that <var>x&prime;</var>&nbsp;= <var>m</var>&nbsp;&times; 12<sup><var>n</var></sup>&nbsp;+ <var>r</var>.
+					<p>
+						Identify the maximum possible integer <var>n</var>&nbsp;&isin; 3..11 and integers <var>m</var>&nbsp;&isin; 1..11 and <var>r</var>&nbsp;&isin; 0..12<sup>n</sup>-1 such that <var>x&prime;</var>&nbsp;= <var>m</var>&nbsp;&times; 12<sup><var>n</var></sup>&nbsp;+ <var>r</var>.
+					</p>
+					<p>
+						If <var>m</var>&nbsp;=&nbsp;1 then you have the option of going back and deriving a new <var>x&prime;</var> with four significant figures if you wish.
+					</p>
 				</li>
 				<li>
 					If <var>m</var>&nbsp;&ne;&nbsp;1 then output the word for <var>m</var>.
