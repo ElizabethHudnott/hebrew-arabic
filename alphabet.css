@@ -47,23 +47,39 @@ h1 {
 	width: fit-content;
 }
 
-.arabic {
-	color: #70cc70;
+body {
+	--arabic-color: #00aa00;
+	--hebrew-color: #8080ff;
 }
 
-.thick {
-	text-decoration: underline;
-	/* text-decoration-color: #70cc70; */
-	text-decoration-color: rgb(51, 168, 85);
+.arabic {
+	color: var(--arabic-color);
 }
 
 .hebrew {
-	color: #aaaaff;
+	color: var(--hebrew-color);
+}
+
+.both {
+	color: #666666;
+}
+
+.thick {
+	font-weight: bold;
 }
 
 .raphe {
 	text-decoration: overline;
-	text-decoration-color: #aaaaff;
+}
+
+.long {
+	border-top-style: solid;
+	border-top-width: 0.09em;
+	display: inline-block;
+	line-height: 0.6;
+	margin-left: 0.05em;
+	min-width: 0.4em;
+	text-align: center;
 }
 
 div.arial, span.arial {
@@ -212,16 +228,6 @@ h2 .big {
 	font-size: 135%;
 }
 
-.long {
-	border-top-style: solid;
-	border-top-width: 0.09em;
-	display: inline-block;
-	line-height: 0.6;
-	margin-left: 0.05em;
-	min-width: 0.4em;
-	text-align: center;
-}
-
 .input {
 	font-size: 250%;
 	text-align: right;
@@ -256,15 +262,6 @@ h2 .big {
 
 .english::after, .rule::after {
 	content: '-';
-}
-
-.arabic-only .thick, .arabic-only.thick {
-	font-weight: bold;
-	text-decoration-color: inherit;
-}
-
-.hebrew-only .raphe, .hebrew-only.raphe {
-	text-decoration-color: inherit;
 }
 
 .common-container {
@@ -410,10 +407,6 @@ table .no-bb, .no-bb {
 
 table .no-b, .no-b {
 	border-color: transparent;
-}
-
-.root .thick {
-	text-decoration-color: inherit;
 }
 
 .ayin {
