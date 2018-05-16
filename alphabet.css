@@ -1,4 +1,11 @@
 body {
+	--arabic-color: #00aa00;
+	--hebrew-color: #8080ff;
+	--masculine-color: blue;
+	--feminine-color: Crimson;
+}
+
+body {
 	font-family: Arial, sans-serif;
 }
 
@@ -45,11 +52,6 @@ h1 {
 .alphabet .label, .order .label {
 	margin-left: 8px;
 	width: fit-content;
-}
-
-body {
-	--arabic-color: #00aa00;
-	--hebrew-color: #8080ff;
 }
 
 .arabic {
@@ -505,4 +507,20 @@ summary h1, summary h2 {
 
 summary {
 	cursor: pointer;
+}
+
+.stacked {
+	display: inline-block;
+	line-height: 1;
+	padding-left: 3px;
+	padding-right: 3px;
+	vertical-align: middle;
+}
+
+.masculine {
+	color: var(--masculine-color);
+}
+
+.feminine {
+	color: var(--feminine-color);
 }
