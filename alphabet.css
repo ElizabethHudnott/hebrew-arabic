@@ -355,7 +355,6 @@ figcaption {
 }
 
 .emchar {
-	color: #222222;
 	font-weight: bold;
 }
 
@@ -479,6 +478,10 @@ table .no-b, .no-b {
 
 .th-note.big {
 	font-size: 150%;
+	font-style: normal;
+}
+
+.th-note.english-char, .th-note english-char {
 	font-style: normal;
 }
 
