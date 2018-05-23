@@ -13,6 +13,10 @@ h1 {
 	clear: left;
 }
 
+ol, ul {
+	overflow-x: hidden;
+}
+
 .alphabet {
 	font-family: "Times New Roman", serif;
 	font-size: 0pt;
@@ -68,6 +72,7 @@ h1 {
 
 .thick {
 	font-weight: bold;
+	text-decoration: underline;
 }
 
 .raphe {
@@ -141,6 +146,7 @@ div.box {
 
 .float {
 	float: left;
+	margin-right: 20px;
 }
 
 .flex {
@@ -201,8 +207,8 @@ p, ol, ul {
 	font-family: sans-serif;
 }
 
-ol.footnotes, ul.footnotes {
-	padding-left: 40px;
+ol.footnotes {
+	padding-left: 1em;
 }
 
 p.footnotes {
