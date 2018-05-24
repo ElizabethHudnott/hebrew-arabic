@@ -6,6 +6,24 @@
 </head>
 <body>
 <h1>Verbs</h1>
+<p>
+	A verb word can be <dfn>conjugated</dfn> by adding prefixes to the beginning, by adding suffixes to the end, or by altering the vowels in its middle, according to various factors. English also makes extensive use of <dfn>auxiliary verbs</dfn> such as <i>have</i>, <i>am</i>, <i>will</i>, <i>could</i>, <i>should</i>, <i>might</i>, etc. which unlike a regular verb don't describe an action in their own right, but instead serve to introduce the main verb of the sentence and add an additional factor to it such as a particular aspect or a particular mood. The factors that we conjugate a verb or add an auxiliary verb for are:
+</p>
+<ol>
+	<li>Aspect</li>
+	<li>Tense (past, present or future)</li>
+	<li>Number (singular, dual or plural)</li>
+	<li>Person (1st, 2nd or 3rd)</li>
+	<li>Gender of the person or people performing the action</li>
+	<li>Mood (statement of fact, conditional, hypothetical, commanding, etc.)</li>
+	<li>Voice (active or passive)</li>
+	<li>Forms (also known as derived stems or binyanim, 10 common ones in Arabic, 7 in Hebrew, plus some rare ones)</li>
+</ol>
+
+<p>
+	Additionally, some verbs are inherently <em>strong verbs</em> and some are <em>weak verbs</em>, and the conjugation rules for strong verbs are entirely different to the rules for weak verbs. In English, a strong verb like <i>run</i> has an irregular past tense form, <i>ran</i>, rather than <i>runed</i> or <i>runned</i>. Weak verbs take an <i>-ed</i> ending but strong verbs have their vowels altered instead. This is directly tied to the historical development of the language. The behaviour of the strong verbs as well as the verbs themselves are derived from oldest ancestor language, <em>Proto-Indo-European (PIE)</em>. Adding a dental (<i>d</i> or <i>t</i>) type of suffix to the weak verbs, which were developed later, such as the <i>-ed</i> suffix in English and other suffixes such as <i>-te</i> in German, this idea was an innovation that started in Proto-Germanic. Arabic and Hebrew also classify verbs into strong verbs and weak verbs (also known as hollow roots) with different conjugation patterns, but the reasons for classifying them as such are different.
+</p>
+
 <figure>
 	<table class="table">
 		<tr>
@@ -21,7 +39,7 @@
 		</tr>
 		<tr>
 			<th class="thick-border">Tense</th>
-			<th colspan="2" class="thick-border">Past<span class="footnote"></span></th>
+			<th colspan="2" class="thick-border">Past</th>
 			<th colspan="2" class="thick-border">Present</th>
 			<th colspan="2" class="thick-border">Future</th>
 		</tr>
@@ -181,13 +199,8 @@
 			</td>
 		</tr>
 	</table>
-	<figcaption>Some combinations of English pronouns, verb conjugations and auxiliary verbs.</figcaption>
+	<figcaption>Some combinations of English pronouns, weak verb conjugations and auxiliary verbs.</figcaption>
 </figure>
-<ol class="footnotes">
-	<li>
-		English has both <em>strong verbs</em> and <em>weak verbs</em>. A strong verb like <i>run</i> has an irregular past tense form, <i>ran</i> rather than <i>runed</i> or <i>runned</i>. Weak verbs take an <i>-ed</i> ending but strong verbs have their vowels altered instead. Arabic also has a classification into "strong" and "weak" verbs but that usage of the term is different.  In English it's directly tied to the historical development of the language. The behaviour of the strong verbs as well as the verbs themselves are derived from oldest ancestor language, <em>Proto-Indo-European (PIE)</em>. Adding a dental (<i>d</i> or <i>t</i>) type of suffix to the verbs that were developed later, such as the <i>-ed</i> suffix in English and other suffixes such as <i>-te</i> in German, this idea was innovation that started in Proto-Germanic.
-	</li>
-</ol>
 
 <h2>Algorithm for Conjugating a Verb</h2>
 <ol>
@@ -563,44 +576,135 @@
 			<th rowspan="4">Number</th>
 			<th rowspan="2" class="thick-border">Aspect</th>
 			<th class="thick-border no-bb">Perfect</th>
-			<th colspan="2" class="thick-border no-bb">Imperfect</th>
+			<th colspan="3" class="thick-border no-bb">Imperfect</th>
 		</tr>
 		<tr>
 			<td class="thick-border"></td>
-			<td class="thick-border">Continuous or Progressive</td>
+			<td>Continuous or Progressive</td>
+			<td class="thick-border">Simple<span class="footnote"></span></td>
 			<td class="thick-border">Simple</td>
 		</tr>
 		<tr>
 			<th class="thick-border">Tense</th>
 			<th rowspan="2" class="thick-border">Past</th>
-			<th rowspan="2" class="thick-border">Present</th>
+			<th colspan="2" rowspan="2" class="thick-border">Present</th>
 			<th rowspan="2" class="thick-border">Future</th>
 		</tr>
 		<tr>
 			<th class="thick-border">Person</th>
 		</tr>
 		<tr>
-			<th>Any</th>
-			<th class="thick-border">Any</th>
-			<td class="thick-border english-char">
+			<th rowspan="2">Singular</th>
+			<th class="thick-border">1st or 2nd</th>
+			<td rowspan="3" class="thick-border english-char">
 				<span class="big-placeholder"></span><span class="pattern">&ndash;ed</span>
 			</td>
-			<td class="thick-border english-char">
+			<td rowspan="3" class="english-char">
 				<span class="big-placeholder"></span><span class="pattern">&ndash;ing</span>
 			</td>
 			<td class="thick-border english-char">
 				<span class="big-placeholder"></span>
 			</td>
+			<td rowspan="3" class="thick-border english-char">
+				<span class="big-placeholder"></span>
+			</td>
+		</tr>
+		<tr>
+			<th>3rd</th>
+			<td class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;s</span>
+			</td>
+		</tr>
+		<tr>
+			<th>Plural</th>
+			<th>Any</th>
+			<td rowspan="3" class="thick-border english-char">
+				<span class="big-placeholder"></span>
+			</td>
 		</tr>
 	</table>
-	<figcaption>The Modern English verb conjugations (though they can be used in more tense-aspect combinations than just these).</figcaption>
+	<figcaption>The Modern English weak verb conjugations (though they can be used in more tense-aspect combinations than just these).</figcaption>
 </figure>
+<ol class="footnotes">
+	<li>
+		As in, "I walk", or, "She walks", versus the continuous or progressive, "I am walking", "She is walking".
+	</li>
+</ol>
 
-<!--
 <figure>
-	<figcaption>The Middle English verb conjugations. They survived into Early Modern (Shakespearean) English.</figcaption>
+	<table class="table">
+		<tr>
+			<th rowspan="4">Number</th>
+			<th rowspan="2" class="thick-border">Aspect</th>
+			<th class="thick-border no-bb">Perfect</th>
+			<th colspan="3" class="thick-border no-bb">Imperfect</th>
+		</tr>
+		<tr>
+			<td class="thick-border"></td>
+			<td>Continuous or Progressive</td>
+			<td class="thick-border">Simple</td>
+			<td class="thick-border">Simple</td>
+		</tr>
+		<tr>
+			<th class="thick-border">Tense</th>
+			<th rowspan="2" class="thick-border">Past</th>
+			<th colspan="2" rowspan="2" class="thick-border">Present</th>
+			<th rowspan="2" class="thick-border">Future</th>
+		</tr>
+		<tr>
+			<th class="thick-border">Person</th>
+		</tr>
+		<tr>
+			<th rowspan="3">Singular</th>
+			<th class="thick-border">1st</th>
+			<td class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;ede</span>
+			</td>
+			<td class="english-char" rowspan="4">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;inge</span><br/>
+				<span class="big-placeholder"></span><span class="pattern">&ndash;ende</span>
+			</td>
+			<td class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;e</span>
+			</td>
+			<td rowspan="4" class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;eth</span><br/>
+				<span class="big-placeholder"></span><span class="pattern">&ndash;en</span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">2nd</th>
+			<td class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;edest</span>
+			</td>
+			<td class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;est</span>
+			</td>
+		</tr>
+		<tr>
+			<th class="thick-border">3rd</th>
+			<td class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;ede</span>
+			</td>
+			<td class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;eth</span> <span class="pronunciation-note">or</span> <span class="big-placeholder"></span><span class="pattern">-s</span>
+			</td>
+		</tr>
+		<tr>
+			<th>Plural</th>
+			<th class="thick-border">Any</th>
+			<td class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;edeth</span><br/>
+				<span class="big-placeholder"></span><span class="pattern">&ndash;eden</span>
+			</td>
+			<td class="thick-border english-char">
+				<span class="big-placeholder"></span><span class="pattern">&ndash;eth</span><br/>
+				<span class="big-placeholder"></span><span class="pattern">&ndash;en</span>
+			</td>
+		</tr>
+	</table>
+	<figcaption>Equivalent Middle English weak verb conjugations in the Southeastern (upper option) and Midlands dialects (lower option).</figcaption>
 </figure>
--->
 
 <div>
 	<a href="index.html">Return to main page</a>
