@@ -17,6 +17,10 @@ ol, ul {
 	overflow-x: hidden;
 }
 
+ol ol {
+	list-style-type: lower-latin;
+}
+
 .alphabet {
 	font-family: "Times New Roman", serif;
 	font-size: 0pt;
@@ -186,8 +190,12 @@ table {
 	font-size: 140%;
 }
 
-.table .thick-border {
+th.thick-border td.thick-border {
 	border-right-width: 3px;
+}
+
+tr.thick-b-border th, tr.thick-b-border td {
+	border-bottom-width: 3px;
 }
 
 .info, .table, p, ol, ul {

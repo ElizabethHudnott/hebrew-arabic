@@ -47,7 +47,6 @@ h2.root {
 .vocab .arabic-char, .vocab .hebrew-char, .vocab .europe-char {
 	padding-right: 15px;
 	text-align: right;
-	width: 110px;
 }
 
 .vocab .english-char {

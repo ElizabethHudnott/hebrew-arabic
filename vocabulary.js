@@ -18,7 +18,8 @@ both.set('th', '<span class="digraph" style="width: 0.5em">th</span>');
 both.set('aai', 'a' + both.get('-') + 'ai');
 both.set('OOi', 'o' + both.get('-') + 'oi');
 both.set('E', '<span class="thin-e">e</span>');
-both.set('e.', '<span class="thin-e">e&#x306;</span>');
+both.set('e.', '');
+//both.set('e.', '<span class="thin-e">e&#x306;</span>');
 both.set('eh', '<span class="tsere-trans">eh</span>');
 both.set('OO', '<span class="long">-o-</span>');
 both.set(' ', '<span style="display: inline-block; width: 15px;">&nbsp;</span>');
@@ -38,17 +39,18 @@ hebrewOverrides.set('q', 'q');
 function transcribeBoth(language, transcription) {
 	var output = '';
 	var startOfSyllable = true;
+	var shva = false;
 	var endOfSyllable, phone;
 	for (let i = 0; i < transcription.length; i++) {
 		let items = transcription[i];
-		if ((phone === undefined || phone === ' ') && items[0] === 'ʼ') {
+		if ((phone === undefined || (phone === ' ' && language !== 'arabic')) &&
+			items[0] === 'ʼ'
+		) {
 			items.shift();
 		}
 		output = output + `<td colspan="${items.length}" class="english-char`;
 		endOfSyllable = false;
-		if (items[1] == 'e.') {
-			output = output + ' align-left';
-		} else if (startOfSyllable && i < transcription.length - 1) {
+		if (startOfSyllable && i < transcription.length - 1) {
 			output = output + ' align-right';
 		} else {
 			endOfSyllable = (
