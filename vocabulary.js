@@ -103,9 +103,6 @@ function transcribePage() {
 	});
 }
 
-/* Options implemented:
- *		vet, gimel, jim, gimelWithoutDagesh, dhalet, tawWithoutDagesh, waw, tsade, qof, qaf
-*/
 function transcribeOption(optionName, value) {
 	if (optionName == 'vet') {
 		both.set('v', value);
