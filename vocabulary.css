@@ -2,6 +2,14 @@ h1 {
 	margin-bottom: 1.3em;
 }
 
+.options td.spacer {
+	width: 30px;
+}
+
+.options select {
+	min-width: 2.2em;
+}
+
 h2.root {
 	margin-bottom: 0.7em;
 }

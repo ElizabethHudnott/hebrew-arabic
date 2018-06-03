@@ -43,20 +43,11 @@ both.set('OOi', 'o.' + both.get('oi'));
 both.set('ooi', 'oo.i');
 
 //Begadkefat letters
-both.set('v', 'b');
-both.set('g-', both.get('gh'));
-both.set('d-', 'd');
 both.set('KH', '<span class="digraph">kh</span>');
-both.set('t-', 't');
 
 var hebrewOverrides = new Map();
 //Post-Biblical consonant pronunciation changes.
-hebrewOverrides.set('w', 'v'); // Waw -> Vav
 hebrewOverrides.set('kh', both.get('H')); // Merged
-
-//Copy data so Hebrew and Arabic presentations can be altered independently.
-hebrewOverrides.set('AA', both.get('AA'));
-hebrewOverrides.set('q', 'q');
 
 function transcribeBoth(language, transcription) {
 	var output = '';
@@ -205,10 +196,14 @@ function addTranscribeOptions(optionNames) {
 	}
 }
 
+function setOption(optionName, value) {
+	$(`#option-${optionName}`).val(value);
+	transcribeOption(optionName, value);
+}
+
 addTranscribeOptions([
 	'vet',
-	'gimel', 'jim',
-	'gimelWithoutDagesh',
+	'gimel', 'gimelWithoutDagesh', 'jim',
 	'dhalet',
 	'tawWithoutDagesh',
 	'waw',
@@ -216,5 +211,19 @@ addTranscribeOptions([
 	'tsade', 'dhaal',
 	'qof', 'qaf'
 ]);
+
+setOption('vet', 'b');
+setOption('gimel', 'g');
+setOption('gimelWithoutDagesh', 'gh')
+setOption('jim', 'j');
+setOption('dhalet', 'd');
+setOption('tawWithoutDagesh', 't');
+setOption('waw', 'v');
+setOption('ayin', 'AA');
+setOption('ayn', 'AA');
+setOption('tsade', 'S');
+setOption('dhaal', 'DH');
+setOption('qof', 'q');
+setOption('qaf', 'q');
 
 transcribePage();

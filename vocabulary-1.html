@@ -7,119 +7,159 @@
 	<link rel="stylesheet" href="fonts/languages.css"/>
 </head>
 <body>
-<h1>Transcription Options</h1>
-<table class="options">
-	<tr>
-		<th colspan="2">Hebrew</th>
-		<th colspan="2">Arabic</th>
-		<th>General</th>
-	</tr>
-	<tr>
-		<th class="hebrew-char">ב</th>
-		<td id="option-vet">
-			<label><input type="radio" name="vet" value="b"/>b</label><br/>
-			<label><input type="radio" name="vet" value="v" />v</label>
-		</td>
-	</tr>
-	<tr>
-		<th class="hebrew-char">גּ</th>
-		<td id="option-gimel">
-			<label><input type="radio" name="gimel" value="g"/>g</label><br/>
-			<label><input type="radio" name="gimel" value="j"/>j</label>
-		</td>
-		<th class="arabic-char">ج</th>
-		<td id="option-jim">
-			<label><input type="radio" name="jim" value="g"/>g</label><br/>
-			<label><input type="radio" name="jim" value="j"/>j</label>
-		</td>
-	</tr>
-	<tr>
-		<th class="hebrew-char">ג</th>
-		<td id="option-gimelWithoutDagesh">
-			<label><input type="radio" name="gimelWithoutDagesh" value="gh"/>gh</label><br/>
-			<label><input type="radio" name="gimelWithoutDagesh" value="g"/>g</label>
-		</td>
-	</tr>
-	<tr>
-		<th class="hebrew-char">ד‎</th>
-		<td id="option-dhalet">
-			<label><input type="radio" name="dhalet" value="dh"/>dh</label><br/>
-			<label><input type="radio" name="dhalet" value="d"/>d</label>
-		</td>
-	</tr>
-	<tr>
-		<th class="hebrew-char">ת</th>
-		<td id="option-tawWithoutDagesh">
-			<label><input type="radio" name="tawWithoutDagesh" value="th"/>th</label><br/>
-			<label><input type="radio" name="tawWithoutDagesh" value="t"/>t</label><br/>
-			<label><input type="radio" name="tawWithoutDagesh" value="d"/>d</label><br/>
-			<label><input type="radio" name="tawWithoutDagesh" value="dh"/>dh</label><br/>
-			<label><input type="radio" name="tawWithoutDagesh" value="s"/>s</label>
-		</td>
-	</tr>
-	<tr>
-		<th class="hebrew-char">ו‎</th>
-		<td id="option-waw">
-			<label><input type="radio" name="waw" value="w"/>w</label><br/>
-			<label><input type="radio" name="waw" value="v"/>v</label>
-		</td>
-	</tr>
-	<tr>
-		<th class="hebrew-char">ע</th>
-		<td id="option-ayin">
-			<label>
-				<input type="radio" name="ayin" value="AA"/><span class="ayin">aa</span>
-			</label><br/>
-			<label class="big">
-				<input type="radio" name="ayin" value="ʻ"/>ʻ
-			</label><br/>
-			<label>
-				<input type="radio" name="ayin" value="ŋ"/>ŋ
-			</label><br/>
-			<label class="big">
-				<input type="radio" name="ayin" value="ʼ"/>ʼ
-			</label><br/>
-			<label>
-				<input type="radio" name="ayin" value=""/>nothing
-			</label>
-		</td>
-		<th class="arabic-char">ع</th>
-		<td id="option-ayn" style="vertical-align: top;">
-			<label>
-				<input type="radio" name="ayn" value="AA"/><span class="ayin">aa</span>
-			</label><br/>
-			<label class="big">
-				<input type="radio" name="ayn" value="ʻ"/>ʻ
-			</label>
-		</td>
-	</tr>
-	<tr>
-		<th class="hebrew-char">צ</th>
-		<td id="option-tsade">
-			<label class="thick"><input type="radio" name="tsade" value="S"/>s</label><br/>
-			<label><input type="radio" name="tsade" value="ts"/>ts</label><br/>
-			<label><input type="radio" name="tsade" value="tz"/>tz</label>
-		</td>
-		<th class="arabic-char">ظ</th>
-		<td id="option-dhaal">
-			<label class="thick"><input type="radio" name="dhaal" value="DH"/>dh</label><br/>
-			<label class="thick"><input type="radio" name="dhaal" value="Z"/>z</label>
-		</td>
-	</tr>
-	<tr>
-		<th class="hebrew-char">ק</th>
-		<td id="option-qof">
-			<label><input type="radio" name="qof" value="q"/>q</label><br/>
-			<label class="thick"><input type="radio" name="qaf" value="K"/>k</label><br/>
-			<label><input type="radio" name="qof" value="k"/>k</label>
-		</td>
-		<th class="arabic-char">ق</th>
-		<td id="option-qaf" style="vertical-align: top;">
-			<label><input type="radio" name="qaf" value="q"/>q</label><br/>
-			<label class="thick"><input type="radio" name="qaf" value="K"/>k</label>
-		</td>
-	</tr>
-</table>
+<details>
+	<summary><h1>Transcription Options</h1></summary>
+	<table class="options">
+		<tr>
+			<th colspan="5">Hebrew</th>
+			<td class="spacer"></td>
+			<th colspan="2">Arabic</th>
+			<td class="spacer"></td>
+			<th colspan="2">Both</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="spacer"></td>
+			<th class="hebrew-char"><label for="option-vet">ב</label></th>
+			<td>
+				<select class="english-char" id="option-vet">
+					<option value="v">v</option>
+					<option value="b">b</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<th class="hebrew-char"><label for="option-gimel">גּ</label></th>
+			<td>
+				<select class="english-char" id="option-gimel">
+					<option value="g">g</option>
+					<option value="j">j</option>
+				</select>
+			</td>
+			<td class="spacer"></td>
+			<th class="hebrew-char"><label for="gimelWithoutDagesh">ג</label></th>
+			<td>
+				<select class="english-char" id="option-gimelWithoutDagesh">
+					<option value="g">g</option>
+					<option value="gh">gh</option>
+				</select>
+			</td>
+			<td class="spacer"></td>
+			<th class="arabic-char"><label for="jim">ج</label></th>
+			<td>
+				<select class="english-char" id="option-jim">
+					<option value="j">j</option>
+					<option value="g">g</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="spacer"></td>
+			<th class="hebrew-char"><label for="dhalet">ד</label>‎</th>
+			<td>
+				<select class="english-char" id="option-dhalet">
+					<option value="d">d</option>
+					<option value="dh">dh</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="spacer"></td>
+			<th class="hebrew-char"><label for="tawWithoutDagesh">ת</label></th>
+			<td>
+				<select class="english-char" id="option-tawWithoutDagesh">
+					<option value="t">t</option>
+					<option value="th">th</option>
+					<option value="s">s</option>
+					<option value="d">d</option>
+					<option value="dh">dh</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="spacer"></td>
+			<th class="hebrew-char"><label for="waw">ו‎</label></th>
+			<td>
+				<select class="english-char" id="option-waw">
+					<option value="v">v</option>
+					<option value="w">w</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="spacer"></td>
+			<th class="hebrew-char"><label for="ayin">ע</label></th>
+			<td>
+				<select class="english-char" id="option-ayin">
+					<option value="ʼ" class="big">ʼ</option>
+					<option value="ŋ">ŋ</option>
+					<option value="ʻ" class="big">ʻ</option>
+					<option value="AA" class="ayin">AA</option>
+					<option value="" class="pronunciation-note">Nothing</option>
+				</select>
+			</td>
+			<td class="spacer"></td>
+			<th class="arabic-char"><label for="ayn">ع</label></th>
+			<td>
+				<select class="english-char" id="option-ayn">
+					<option value="ʻ" class="big">ʻ</option>
+					<option value="AA" class="ayin">AA</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="spacer"></td>
+			<th class="hebrew-char"><label for="tsade">צ</label></th>
+			<td>
+				<select class="english-char" id="option-tsade">
+					<option value="ts">ts</option>
+					<option value="tz">tz</option>
+					<option value="S" class="thick">s</option>
+				</select>
+			</td>
+			<td class="spacer"></td>
+			<th class="arabic-char"><label for="dhaal">ظ</label></th>
+			<td>
+				<select class="english-char" id="option-dhaal">
+					<option value="DH" class="thick">dh</option>
+					<option value="Z" class="thick">z</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td class="spacer"></td>
+			<th class="hebrew-char"><label for="qof">ק</label></th>
+			<td>
+				<select class="english-char" id="option-qof">
+					<option value="k">k</option>
+					<option value="K">Heavy <span class="thick">k</span></option>
+					<option value="q">q</option>
+				</select>
+			</td>
+			<td class="spacer"></td>
+			<th class="arabic-char"><label for="qaf">ق</label></th>
+			<td>
+				<select class="english-char" id="option-qaf">
+					<option value="K" class="thick">k</option>
+					<option value="q">q</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+</details>
 
 <h1>Religious Words mostly, Nouns mostly</h1>
 <div>
@@ -286,19 +326,19 @@
 		</tr>
 		<tr>
 			<td>ŋ</td>
+			<td></td>
+			<td rowspan="2">ŋ</td>
 			<td>ŋ</td>
-			<td rowspan="2">ŋ</td>
-			<td rowspan="2">ŋ</td>
-			<td rowspan="2">si<span class="emchar">n</span>ger</td>
+			<td>si<span class="emchar">n</span>ger</td>
 		</tr>
 		<tr style="height: 1.5em;">
 			<td rowspan="2" class="big">ʻ</td>
 			<td rowspan="3">ʕ</td>
+			<td rowspan="3"></td>
+			<td rowspan="3"></td>
 		</tr>
 		<tr>
 			<td rowspan="2" style="height: 3em">ʕ</td>
-			<td rowspan="2"></td>
-			<td rowspan="2"></td>
 		</tr>
 		<tr>
 			<td><span  class="ayin digraph">aa</span></td>
@@ -376,13 +416,12 @@
 		</tr>
 		<tr>
 			<td><span class="digraph">dh</span></td>
-			<td colspan="2">ð̟</td>
-			<td>ð</td>
+			<td colspan="3">ð</td>
 			<td><span class="emchar">th</span>eir</td>
 		</tr>
 		<tr>
 			<td class="thick"><span class="digraph">dh</span><br/>z</td>
-			<td>ð̟ˤ</td>
+			<td>ðˤ</td>
 			<td colspan="2"></td>
 			<td></td>
 		</tr>
@@ -465,7 +504,7 @@
 			<td><span class="emchar">k</span>ept</td>
 		</tr>
 		<tr>
-			<td style="border-bottom-width: 0px">
+			<td rowspan="2">
 				<span class="digraph">kh</span>
 			</td>
 			<td>χ</td>
@@ -474,9 +513,6 @@
 			<td>Ba<span class="emchar">ch</span><span class="footnote"></span></td>
 		</tr>
 		<tr>
-			<td style="border-top-width: 0px">
-				<span class="digraph">k<span class="hebrew">h</span></span>
-			</td>
 			<td colspan="3">x</td>
 			<td>lo<span class="emchar">ch</span></td></td>
 		</tr>
@@ -584,8 +620,7 @@
 		</tr>
 		<tr>
 			<td><span class="digraph">th</span></td>
-			<td colspan="2">θ̟</td>
-			<td>θ</td>
+			<td colspan="3">θ</td>
 			<td><span class="emchar">th</span>reat</td>
 		</tr>
 		<tr>

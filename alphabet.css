@@ -195,6 +195,8 @@ th.thick-border td.thick-border {
 }
 
 tr.thick-b-border th, tr.thick-b-border td {
+	border-border-color: #444444;
+	border-bottom-style: solid;
 	border-bottom-width: 3px;
 }
 
