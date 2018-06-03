@@ -1,38 +1,60 @@
 var both = new Map();
 
-both.set('-', '.');
+//Punctuation
+both.set('-', '.'); //Syllable break
+both.set(' ', '<span style="display: inline-block; width: 15px;">&nbsp;</span>'); //Space
+
+//Diagraphs
 both.set('dh', '<span class="digraph">dh</span>');
-both.set('H', '<span class="thick">h</span>');
-both.set('ch', '<span class="digraph">ch</span>');
 both.set('kh', '<span class="digraph">kh</span>');
-both.set('T', '<span class="thick">t</span>');
-both.set('KH', '<span class="digraph">k<span class="hebrew">h</span></span>');
-both.set('L', '<span class="thick">l</span>');
 both.set('AA', '<span class="ayin digraph">aa</span>');
 both.set('gh', '<span class="digraph">gh</span>');
+both.set('sh', '<span class="digraph">sh</span>');
+both.set('th', '<span class="digraph" style="width: 0.5em">th</span>');
+
+//Heavy letters distinguished using different formatting
+both.set('H', '<span class="thick">h</span>');
+both.set('T', '<span class="thick">t</span>');
+both.set('L', '<span class="thick">l</span>');
 both.set('S', '<span class="thick">s</span>');
 both.set('D', '<span class="thick">d</span>');
 both.set('DH', '<span class="digraph thick">dh</span>');
-both.set('sh', '<span class="digraph">sh</span>');
-both.set('th', '<span class="digraph" style="width: 0.5em">th</span>');
-both.set('aai', 'a' + both.get('-') + 'ai');
-both.set('OOi', 'o' + both.get('-') + 'oi');
-both.set('E', '<span class="thin-e">e</span>');
+
+//Very short vowels
 both.set('e.', '');
 //both.set('e.', '<span class="thin-e">e&#x306;</span>');
-both.set('eh', '<span class="tsere-trans">eh</span>');
-both.set('OO', '<span class="long">-o-</span>');
-both.set(' ', '<span style="display: inline-block; width: 15px;">&nbsp;</span>');
 
+//Typographical variants
+both.set('E', '<span class="thin-e">e</span>'); //Squished e
+
+//Long vowels
+both.set('aa', 'aa');
+both.set('eh', '<span class="tsere-trans">eh</span>');
+both.set('ee', 'ee');
+both.set('OO', '<span class="long">-o-</span>');
+both.set('oo', 'oo');
+
+//Diphthongs
+both.set('ai', 'ai');
+both.set('oi', 'oi');
+both.set('ui', 'ui');
+both.set('aai', 'a.' + both.get('ai'));
+both.set('OOi', 'o.' + both.get('oi'));
+both.set('ooi', 'oo.i');
+
+//Begadkefat letters
 both.set('v', 'b');
 both.set('g-', both.get('gh'));
 both.set('d-', 'd');
-both.set('D-', 'd');
+both.set('KH', '<span class="digraph">kh</span>');
 both.set('t-', 't');
-both.set('ts', both.get('S'));
 
 var hebrewOverrides = new Map();
-hebrewOverrides.set('w', 'v');
+//Post-Biblical consonant pronunciation changes.
+hebrewOverrides.set('w', 'v'); // Waw -> Vav
+hebrewOverrides.set('kh', both.get('H')); // Merged
+
+//Copy data so Hebrew and Arabic presentations can be altered independently.
 hebrewOverrides.set('AA', both.get('AA'));
 hebrewOverrides.set('q', 'q');
 
@@ -117,15 +139,10 @@ function transcribeOption(optionName, value) {
 			both.set('g-', 'g');
 		}
 	} else if (optionName == 'dhalet') {
-		if (value == 'alwaysDh') {
+		if (value == 'dh') {
 			both.set('d-', both.get('dh'));
-			both.set('D-', both.get('dh'));			
-		} else if (value == 'sometimesDh') {
-			both.set('d-', 'd');
-			both.set('D-', both.get('dh'));
 		} else {
 			both.set('d-', 'd');
-			both.set('D-', 'd');
 		}
 	} else if (optionName == 'tawWithoutDagesh') {
 		if (value.length > 1) {
@@ -151,9 +168,9 @@ function transcribeOption(optionName, value) {
 		}		
 	} else if (optionName == 'tsade') {
 		if (value == 'S') {
-			both.set('ts', both.get('S'));
+			hebrewOverrides.set('S', both.get('S'));
 		} else {
-			both.set('ts', `<span class="digraph" style="width: 0.5em;">${value}</span>`);
+			hebrewOverrides.set('S', `<span class="digraph" style="width: 0.5em;">${value}</span>`);
 		}
 	} else if (optionName == 'dhaal') {
 		if (value == "DH") {
