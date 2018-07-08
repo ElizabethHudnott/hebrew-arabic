@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bilingual Typesetting Tool</title>
+	<link rel="stylesheet" href="../alphabet.css"/>
+	<link rel="stylesheet" href="../vocabulary.css"/>
+</head>
+<body>
+<div>
+	<label>
+		Hebrew:
+		<input id="original-input" class="hebrew-char" lang="heb"/>
+	</label>
+	<label>
+		Transcription Code:
+		<input id="transcription-input" class="english-char"/>
+	</label>
+	<button type="button" id="add-button">Add</button>
+</div>
+<div class="transcribed-para" id="bilingual-output">
+</div>
+<textarea id="html-output" readonly>
+</textarea>
+
+<div>
+	<a href="index.html">Return to main page</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="../vocabulary.js"></script>
+<script>
+	both.set('-', '&thinsp;');
+	both.set('ʼ', '');
+	setOption('vet', 'ḅ');
+	both.set('H', '<span class="digraph">ch</span>')
+	setOption('ayin', 'ʻ');
+	both.set('e.', '\'');
+	both.set('aa', '<span class="long">a</span>');
+	both.set('eh', '<span class="long">e</span>');
+	both.set('ee', '<span class="long">i</span>');
+	both.set('OO', '<span class="long">o</span>');
+	both.set('oo', '<span class="long">u</span>');
+	both.set('aai', '<span class="long">a</span>i');
+	both.set('OOi', '<span class="long">o</span>i');
+	both.set('ooi', '<span class="long">u</span>i');
+
+	let originalInput = document.getElementById('original-input');
+	let transcriptionInput = document.getElementById('transcription-input');
+	let htmlOutput = document.getElementById('html-output');
+	let bilingualOutput = $('#bilingual-output');
+
+	$('#add-button').on('click', function (event) {
+		const word = originalInput.value.replace(/[\u0591-\u05aa\u05ac-\u05af]/g, '');
+		const transcription = transcriptionInput.value.replace(/,,/g, ',-,').replace(/'/g, 'ʼ').split(',');
+		let transcriptionData = '["' + transcription.join('","') + '"]';
+		let html = `
+			<table class="vocab">
+				<tr>
+					<td class="hebrew-char" colspan="${transcription.length}">${word}</td>
+				</tr>
+				<tr data-transcribe='${transcriptionData}' data-lang="he"></tr>
+			</table>
+		`;
+		jq = $(html);
+		bilingualOutput.append(jq);
+		transcribeWord(jq.find('[data-lang]'));
+	});
+
+</script>
+</body>
+</html>

@@ -2,6 +2,7 @@ var both = new Map();
 
 //Punctuation
 both.set('-', '.'); //Syllable break
+both.set('_', '-'); //Maqaf (hyphen)
 both.set(' ', '<span style="display: inline-block; width: 15px;">&nbsp;</span>'); //Space
 
 //Diagraphs
@@ -13,6 +14,7 @@ both.set('sh', '<span class="digraph">sh</span>');
 both.set('th', '<span class="digraph" style="width: 0.5em">th</span>');
 
 //Heavy letters distinguished using different formatting
+both.set('ʼ', 'ʼ');
 both.set('H', '<span class="thick">h</span>');
 both.set('T', '<span class="thick">t</span>');
 both.set('L', '<span class="thick">l</span>');
@@ -56,7 +58,7 @@ function transcribeBoth(language, transcription) {
 	var endOfSyllable, phone;
 	for (let i = 0; i < transcription.length; i++) {
 		let items = transcription[i];
-		if ((phone === undefined || (phone === ' ' && language !== 'arabic')) &&
+		if ((phone === undefined || (phone === ' ' && language !== 'ar')) &&
 			items[0] === 'ʼ'
 		) {
 			items.shift();
@@ -80,7 +82,7 @@ function transcribeBoth(language, transcription) {
 
 		for (phone of items) {
 			var html = undefined;
-			if (language == 'hebrew') {
+			if (language == 'he') {
 				html = hebrewOverrides.get(phone);
 			}
 			if (html === undefined &&
@@ -99,20 +101,32 @@ function transcribeBoth(language, transcription) {
 	return output;
 }
 
+
+function transcribeWord(jqElem) {
+	var language = jqElem.data('lang');
+	if (language === undefined) {
+		var word = jqElem.children('.hebrew-char, .arabic-char');
+		if (word.hasClass('hebrew-char')) {
+			language = 'he';
+		} else if (word.hasClass('arabic-char')) {
+			language = 'ar'
+		}
+	}
+	jqElem.children('.english-char').remove();
+	var phones = jqElem.data('transcribe');
+	if (Array.isArray(phones)) {
+		//JQuery weirdness.
+		phones = [phones];
+	} else {
+		phones = JSON.parse('[' + phones + ']');
+	}
+	var cells = transcribeBoth(language, phones);
+	jqElem.append(cells);
+}
+
 function transcribePage() {
 	$('tr[data-transcribe]').each(function (index, element) {
-		var jqElem = $(element);
-		var word = jqElem.children('.hebrew-char, .arabic-char');
-		var language;
-		if (word.hasClass('hebrew-char')) {
-			language = 'hebrew';
-		} else if (word.hasClass('arabic-char')) {
-			language = 'arabic'
-		}
-		jqElem.children('.english-char').remove();
-		var phones = JSON.parse('[' + element.dataset.transcribe + ']');
-		var cells = transcribeBoth(language, phones)
-		jqElem.append(cells);
+		transcribeWord($(element));
 	});
 }
 
@@ -156,7 +170,7 @@ function transcribeOption(optionName, value) {
 			both.set('AA', '<span class="ayin digraph">aa</span>');
 		} else {
 			both.set('AA', 'ʻ');
-		}		
+		}
 	} else if (optionName == 'tsade') {
 		if (value == 'S') {
 			hebrewOverrides.set('S', both.get('S'));

@@ -41,7 +41,7 @@ h2.root {
 }
 
 .align-right {
-	text-align: right !important;	
+	text-align: right !important;
 }
 
 .vocab .english-char {
@@ -113,4 +113,26 @@ h2.root {
 
 #index .arabic-char {
 	font-size: 270%;
+}
+
+.transcribed-para {
+	direction: rtl;
+}
+
+.transcribed-para .vocab {
+	direction: initial;
+}
+
+.transcribed-para .vocab {
+	display: inline-block;
+	margin-left: 1em;
+}
+
+.transcribed-para .hebrew-char {
+	padding-bottom: 20px;
+}
+
+.transcribed-para .english-char {
+    font-size: 160%;
+    color: gray;
 }
