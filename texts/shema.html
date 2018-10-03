@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sh'ma</title>
+	<link rel="stylesheet" href="../alphabet.css"/>
+	<link rel="stylesheet" href="../vocabulary.css"/>
+</head>
+<body>
+<div>
+	<button id="toggle-transcription">Toggle Transcription</button>
+</div>
+<div class="transcribed-para">
+	<table class="vocab">
+		<tr>
+			<td class="hebrew-char" colspan="6">שְׁמַע</td>
+		</tr>
+		<tr data-transcribe='["sh","e.","-","m","a","AA"]' data-lang="he"></tr>
+	</table>
+	<table class="vocab" data-lang="he">
+		<tr>
+			<td class="hebrew-char" colspan="10">יִשְׂרָאֵל</td>
+		</tr>
+		<tr data-transcribe='["y","i","s"],["-"],["r","aa"],["-"],["ʼ","eh","l"]' data-lang="he"></tr>
+	</table>
+</div>
+
+<div>
+	<a href="index.html">Return to main page</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="../vocabulary.js"></script>
+<script>
+	both.set('-', '&thinsp;');
+	both.set('ʼ', '');
+	setOption('vet', 'ḅ');
+	both.set('H', '<span class="digraph">ch</span>')
+	setOption('ayin', 'ʻ');
+	both.set('e.', '\'');
+	both.set('aa', '<span class="long">a</span>');
+	both.set('eh', '<span class="long">e</span>');
+	both.set('ee', '<span class="long">i</span>');
+	both.set('OO', '<span class="long">o</span>');
+	both.set('oo', '<span class="long">u</span>');
+	both.set('aai', '<span class="long">a</span>i');
+	both.set('OOi', '<span class="long">o</span>i');
+	both.set('ooi', '<span class="long">u</span>i');
+	transcribePage();
+
+	$('#toggle-transcription').on('click', function (event) {
+		$('[data-transcribe]').toggle();
+	})
+</script>
+</body>
+</html>
