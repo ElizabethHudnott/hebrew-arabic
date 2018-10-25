@@ -1,15 +1,15 @@
 ﻿pen
-copi		Y
+kopi		Y,c
 hapən		ə
 bak		ck
 bubəl		lmn
 job
 tee		ī
-tait		ay
+tyt		ay
 butən		lmn
 siti		Y
 betər		ə
-dei		ey
+dey		ey
 ladər		ə
 od
 kee		ī
@@ -20,12 +20,12 @@ gigəl		lmn
 gəwst		əw
 chə̄rch		ə̄r
 mach
-neichər		ey,ə
+neychər		ey,ə
 juj		j
-eij		ey,j
+eyj		ey,j
 soldyur
 fat
-cofi		Y
+kofi		Y,c
 ruf
 moov		ū
 thing
@@ -42,7 +42,7 @@ zəwn		əw
 rəwz+		əw
 ship
 shōr
-steishən		ey,ə
+steyshən		ey,ə
 pleʒə̄r		ə̄r
 viʒən		ə
 hot
@@ -51,7 +51,7 @@ bihind
 mōr
 hamər
 sum
-nais		ay
+nys		ay
 nəw		əw
 funi		Y
 sun
@@ -59,7 +59,7 @@ ring
 long
 thank+
 sung
-lait		ay
+lyt		ay
 vali		Y
 feel
 yet
@@ -69,7 +69,7 @@ byooti		y,Y
 wet
 wun
 wen
-qween		kw,ī
+queen		kw,ī
 dres		s
 bed
 lot
@@ -83,11 +83,11 @@ gud		u
 put		u
 flees		ī,s
 streek		ī
-prais		ay,s
-hai		ay
-trai		ay
-chois		oy,s
-boi		oy
+prys		ay,s
+hy		ay
+try		ay
+choys		oy,s
+boy		oy
 goos		ū,s
 too		ū
 bloo		ū
@@ -100,7 +100,7 @@ naw		aw
 niər		ə
 hiər
 siəriəs		ə
-sqwēr		kw,ē
+squēr		kw,ē
 fēr		ē
 vēriəs		ē,ə
 stārt		ā
@@ -116,18 +116,18 @@ nə̄rs		ə̄,s
 stə̄r		ə̄
 kurij		c,j
 hapi		Y
-reidieishən	ey,ə
+reydieyshən	ey,ə
 glōriəs		ə,s
 əbawt		aw
 komə		c,ə
 komən		c,ə
 inflooens		ū,s
-sityooeishən	ū,ey,ə,y
+sityooeyshən	ū,ey,ə,y
 anyəl		y
 intend
-beisik		ey,c
+beysik		ey,c
 stimyələs		y,ə
-edyukeit		y,ey
+edyukeyt		y,ey
 kit
 bid
 him
