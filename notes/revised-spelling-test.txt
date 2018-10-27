@@ -21,8 +21,8 @@ gəwst		əw
 chə̄rch		ə̄r
 mach
 neychər		ey,ə
-juj		j
-eyj		ey,j
+judʒ		j
+eydʒ		ey,j
 soldyur
 fat
 kofi		Y,c
@@ -37,7 +37,7 @@ smoodh		dh
 soon		ū
 sees		ī,s
 sistər
-ziurəw		əw
+ziərəw		əw
 zəwn		əw
 rəwz+		əw
 ship
@@ -114,7 +114,7 @@ pōr		uər
 juəri		uər,Y
 nə̄rs		ə̄,s
 stə̄r		ə̄
-kurij		c,j
+kuridʒ		c,j
 hapi		Y
 reydieyshən	ey,ə
 glōriəs		ə,s
