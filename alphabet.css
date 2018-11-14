@@ -13,10 +13,6 @@ h1 {
 	clear: left;
 }
 
-ol, ul {
-	overflow-x: hidden;
-}
-
 ol ol {
 	list-style-type: lower-latin;
 }
