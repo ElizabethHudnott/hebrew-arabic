@@ -1,0 +1,39 @@
+A "Scientifically" Designed Alphabet for Maximum Letter Contrast
+
+We can divide the space we have available in which to draw a character into
+	three vertical areas, top middle and bottom, and,
+	three horizontal areas, left, centre and right.
+
+It seems intuitive that our eyes and our brains are capable of quickly discerning left from right, top from bottom, <picture> from <picture>, <picture> from <picture>, etc.  Three positions in each dimension seems to be the magic number. Any more would slow down our reading comprehension, while any fewer would severely constrain our ability to design characters.
+
+My assumptions likely reflect some cultural bias despite the attempt to be objective. The alphabet we'll design is intended to be used with a language where most words have three or more characters. If your language mostly has very short words then probably your brain can afford to spend a little more time deciphering each character.
+
+The simplest way of marking each of the six areas is with a straight line, horizontal or vertical. We can generate characters by conceiving of an LCD display (similar to an old calculator) where each of the six lines can be turned on (made black) or off (left to remain white). If two lines meet at a right angle where one line ends and another begins then the corner can be rounded off, for example <picture> can be transformed into <picture>. I consider the two forms similar enough to regard them as stylistic variants of the same basic shape, and an alphabet seeking to have maximum contrast between each of its letters should include at most one of these two characters. Although the proposed equivalence between straight and curved edges seems in general reasonable, the extreme case where a rounded off square (or rectangle) becomes transformed into a circle (or ellipse) could (and will) arguably be made an exception. It is easiest to count the possible characters by drawing the straight line variants. However, a real alphabet derived from our findings should use  a mix of rounded variants and angular variants. This avoids the problem whereby the reader might interpret a non-existent character formed by combining the right edge of one character with the left edge of the next (or previous) character.
+
+In addition to the simplification into six possible lines, I impose a further constraint. If a character includes the middle vertical line then it cannot also include a vertical line on the left or the right side. This restriction on the complexity of the vertical lines (which limits them to being at most two in number and symmetrical when there's more than one), reflects the fact that the reader already has a more complex task to perform when it comes to interpreting the horizontal dimension, namely that they must first recognize the boundaries between adjacent characters. Of course, if you intend to write your words from top to bottom or bottom to top then you'll need to invert many of the statements I'm making. I relax the restriction slightly by permitting a circle with a central vertical line, even though in the LCD display model this would be represented as a square with a third vertical line, like <picture>, for example.
+
+In the first instance I don't consider:
+	Horizontal lines that don't fill the full width of the character.
+	Vertical lines that don't fill the full height of the character.
+	Diagonal lines
+	Descenders
+	Diacritics
+
+These will be considered in Sections <N>.
+
+In addition to restricting character complexity through adherence to the six line model, the spaces formed by the lines dividing up the area into different portions should also not be too complex.  The lines should not divide the character into more than four different regions, examples like X and + representing more complex cases.
+
+It should not be possible to transform one of our characters into another valid character by moving it sideways. The character that consists solely of a single vertical line on left is considered identical to the character that consists solely of a single vertical line on right. In practice our writings don't exist in the context of a grid system. Most computer fonts are variable width and our handwriting certainly reflects our attempts to make shapes by drawing strokes. We only consciously think about leaving blank space when we leave a space between separate words. Although we may choose to prohibit joining up certain pairs of adjacent letters, the spaces between letters within a word (if they exist) are small but not necessarily perfectly consistent in size. In handwriting the spaces between words are big enough to be noticeable, but again are not necessarily a fixed size.
+
+Two characters (or the same character) when placed next to each other with a small gap or no gap between them should not look the same as a third character. Thus, not only is a character consisting of a single vertical line the same independently of whether that line is notionally placed in the left, centre or right portion in the theoretical model, it's also impermissible to include both the single vertical line character and another character consisting solely of two (or three) vertical lines, unless for some reason it'd be impossible for a character to occur adjacent to itself in your target language (Perhaps you have a design similar to how Arabic uses a shaddah). 
+
+I'm interested in forming characters which remain easily distinguishable from one another and unambiguous even when they are considerably distorted from the their perfect shapes (as bad handwriting often is).  Therefore, a few more rules are imposed.
+
+	It should not be possible to transform one character into another by moving it vertically.
+	It should not be possible to transform one character into another by stretching or compressing it horizontally or vertically.
+	The rule about two characters not looking like a third character is extended so that no two characters should look like a stretched version of a third character, even one radically stretched to twice it's normal width. Thus, from <picture>, <picture> and <picture> at most two of these three characters could be selected for inclusion in the final alphabet.
+	It should not be possible to transform one character into another by skewing (slanting) it along a horizontal or vertical line *unless* the character contains a right angle.  This will become important when we study diagonals.
+
+After we've enumerated the possible characters that meet these criteria we'll explore some possible conditions in which it may make sense to relax the rules slightly and break them while still producing easily recognizable characters.  For example, the common characters m, Ш and Ж don't satisfy the criteria set out. The first two contain three vertical lines, while the third has six regions.
+
+...
