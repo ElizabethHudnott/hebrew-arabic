@@ -7,11 +7,11 @@
 <body>
 <h1>The ElizaLang Language</h1>
 <p>
-	I made up&nbsp;/ am making up my own language!
+	I'm making up my own language!
 </p>
 
 <p>
-	This article doesn't deal with vocabulary. All words given are either English words or else nonsensical terms like <i>1es</i>, both of which are used as placeholders for the real ElizaLang words. This article also doesn't deal with the ElizaLang alphabet, punctuation marks or the shapes of the diacritical marks. Presently the letters are identified by their transcriptions into English only. The ElizaLang alphabet is a full alphabet though! That is, the vowels are given their own letters rather than being diacritic marks like the short vowels in Arabic. There is no notion of capital and lower case letters.
+	This article doesn't deal with vocabulary. All words given are either English words or else nonsensical terms like <i>1es</i>, both of which are used as placeholders for real ElizaLang words. This article also doesn't deal with the ElizaLang alphabet, punctuation marks or the shapes of the diacritical marks. Presently the letters are identified by their transcriptions into English only. The ElizaLang alphabet is a full alphabet though, which means the vowels are given their own letters rather than being merely diacritic marks like the short vowels in Arabic. There is no notion of capital and lower case letters.
 </p>
 
 <details>
@@ -43,6 +43,10 @@
 		<tr>
 			<td>h</td>
 			<td>h</td>
+		</tr>
+		<tr>
+			<td>w</td>
+			<td>w</td>
 		</tr>
 		<tr>
 			<td>v</td>
@@ -146,7 +150,7 @@
 		</tr>
 	</table>
 	<p>
-		Consonants can be geminated by writing the same letter twice, although in Romanized transcriptions the diagraphs are not duplicated.
+		Consonants can be geminated using a diacritic, or by writing the same letter twice in Romanized transcriptions (although diagraphs are not duplicated). /p/ and /w/ only occur in words derived from Latin.
 	</p>
 </details>
 
@@ -155,11 +159,18 @@
 	<table class="table">
 		<tr>
 			<th>Number</th>
+			<th>Transcription</th>
 			<th>Meaning</th>
 		</tr>
 		<tr>
+			<td>1</td>
 			<td><span class="long">&ensp;</span></td>
 			<td>Vowel is long</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<th></th>
+			<td>Gemination</td>
 		</tr>
 	</table>
 </details>
@@ -273,13 +284,6 @@
 </details>
 
 <details>
-	<summary><h1>Syllable Structures</h1></summary>
-	<p>
-		The permissible syllable structures are <span class="syllable-structure">CV</span>, <span class="syllable-structure">CVV</span>, <span class="syllable-structure">CVC</span> and <span class="syllable-structure">CVVC</span>.
-	</p>
-</details>
-
-<details>
 	<summary><h1>Lexicon</h1></summary>
 	<p>
 		The language uses a consonantal root system. Roots come from three sources.
@@ -290,7 +294,7 @@
 		<li>Latin words used in English</li>
 	</ol>
 	<p>
-		Where there are conflicting meanings between Hebrew and Arabic then the Hebrew meaning takes precedence. Words from Semitic origins never use /p/ in ElizaLang, only /f/.  Latin root words are reduced to consonantal roots using a set process.  These borrowed words may sometimes only exist in English when joined to an affix (e.g. <i>re-volve</i>), or may have experienced mutations due to adoption into English via French. In such cases the original Latin will first be restored.  The twofold Semitic and Latinate sets of vocabulary form two distinct registers in the language.  Almost every word is duplicated.  Language learners begin by using the Latin vocabulary extensively and then gradually acquire more and more Semitic words.  Proficient users may selectively use Latin derived words, phrases or sentences to give an item or an action a sense of jocularity, sarcasm, casualness, laxness, inferior status, lack of gravitas, lack of serious intention to complete an action, etc.
+		Where there are conflicting meanings between Hebrew and Arabic then the Hebrew meaning takes precedence. Words from Semitic origins never use /p/ in ElizaLang, only /f/.  Latin root words are reduced to consonantal roots using a set process.  These borrowed words may sometimes only exist in English when joined to an affix (e.g. <i>re-volve</i>), or may have experienced mutations due to adoption into English via French. In such cases the original Latin will first be restored.  The twofold Semitic and Latinate sets of vocabulary form two distinct registers in the language.  Almost every word is duplicated and language learners begin using the Latin vocabulary extensively and then gradually acquire more and more Semitic words.  Proficient users may selectively use Latin derived words, phrases or sentences to give an item or an action a sense of jocularity, sarcasm, casualness, laxness, inferior status, lack of gravitas, lack of serious intention to complete an action, etc.
 	</p>
 
 	<h2>Adapting Latin Roots</h2>
@@ -387,19 +391,68 @@
 		</tr>
 	</table>
 	<p>
-		A sequence of sound changes occur. All except the final one are assumed to have taken place in ancient times inside the Latinate culture of the mythical constructed world (<dfn>conworld</dfn>) which our mythical group of Semitic people encountered.  The final sound change is specifically an adaptation made when the roots were borrowed to make them better fit the phonotactic constraints adhered to by the native Semitic roots.
+		The word is syllabified in accordance with the permitted onset and coda consonant clusters in Classical Latin, with consonant clusters <em>always</em> split between syllables (even more so than in Latin, as in whenever a pair of valid coda and onsets can be formed), with any split needed occurring between the first and second consonants (or after the second consonant in the case of /skr/, which becomes /ʃ.r/).
+	</p>
+	<p>
+		A sequence of sound changes occurs. These are assumed to have taken place in ancient times inside the Latinate culture of the mythical constructed world <dfn>(conworld)</dfn> which our mythical group of Semitic people encountered.
 	</p>
 	<ol>
-		<li>t<sup>h</sup> > θ</li>
-		<li>[+aspirated] > [-aspirated]</li>
+		<li>Loss of the aspirated consonants.
+			<ul>
+				<li>p<sup>h</sup> > f</li>
+				<li>t<sup>h</sup> > θ</li>
+				<li>k<sup>h</sup> > k</li>
+			</ul>
+		</li>
 		<li>[+labialized] > [-labialized]w</li>
-		<li>w > v</li>
+		<li>w > v  except in syllable onsets kw, skw and gw</li>
+		<li>ɫ > l</li>
+		<li>ŋn > nː (or n when word initial after insertion of a new pattern)</li>
+		<li>ŋ > n / _$</li>
 		<li>sk > ʃ</li>
-		<li>kw > q</li>
 	</ol>
 	<p>
-		The word is subsequently syllabified in accordance with the permitted onset and coda consonant clusters in Classical Latin, with consonant clusters split between syllables wherever possible, even more so than in Latin, with any split needed occurring between the first and second consonants.  The unoriginal sounds /θ/, /ʃ/, /v/ and /q/ are permitted in the same positions as /t/, /s/ and original /w/ and /k<sup>w</sup>/. Finally, a consonantal root is formed by extracting the onset and coda from each syllable of the intermediate word form.  If the original word began with a vowel then the consonantal root will begin with a glottal stop.  Thus, in borrowings, combinations of consonants such as <i>bl</i> and <i>br</i> are treated as though they were single consonant so far as insertion of patterns into roots goes.  After pattern insertion, words that don't have any such clusters (nor /p/) have a suffix added to indicate that they are borrowings.
+		<i>z</i> between vowels is always geminated, written with a diacritical mark in the native alphabet and transcribed as <i>zz</i>.  A vowel followed by a nasal in the Latin orthography is realized as a vowel followed by a nasal and not as nasalized vowel.
 	</p>
+	<p>
+		A consonantal root is formed by extracting the onset and coda from each syllable of the intermediate word form.  If the original word began with a vowel then the consonantal root will begin with a glottal stop.  Thus, in borrowings combinations of consonants such as <i>bl</i> and <i>br</i> are treated as though they were a single consonant so far as insertion of patterns into roots is concerned.  A prefix is added to words derived from Latin roots to indicate that they are borrowings (unless the root contains at least one /p/, /gw/, /kw/ or /ʃw/, since these are not used in words derived from Semitic origins).
+	</p>
+</details>
+
+<details>
+	<summary><h1>Syllable Structures</h1></summary>
+	<p>
+		The permissible syllable structures for words derived from Semitic origins <span class="syllable-structure">CV</span>, <span class="syllable-structure">CVV</span>, <span class="syllable-structure">CVC</span> and <span class="syllable-structure">CVVC</span>. Consonant clusters in onsets and codas in Latin derived words are more complicated. The following follows the analysis in <cite>Diphthongs in the Syllable Structure of Latin</cite> by András Cser in <cite>Glotta</cite> (1999).
+	</p>
+	<figure>
+		<table class="table">
+			<tr>
+				<th>Original Latin Rule</th>
+				<th>Example ElizaLang Transcriptions</th>
+			</tr>
+			<tr>
+				<td>Stop or /f/ + liquid</td>
+				<td>bl, gl, pl, kl, fl, br, dr, gr, pr, tr, kr, fr, thr</td>
+			</tr>
+			<tr>
+				<td>/s/ + voiceless stop</td>
+				<td>sp, st, sh, shw</td>
+			</tr>
+			<tr>
+				<td>/s/ + /w/</td>
+				<td>sv</td>
+			</tr>
+			<tr>
+				<td>/s/ + voiceless stop + liquid</td>
+				<td>spl, spr, str, shr</td>
+			</tr>
+			<tr>
+				<td>Velar stop + /w/</td>
+				<td>gw, kw</td>
+			</tr>
+		</table>
+		<figcaption>Possible onset clusters</figcaption>
+	</figure>
 </details>
 
 <details>
