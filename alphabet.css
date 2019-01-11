@@ -386,7 +386,7 @@ figcaption {
 .combo  .over {
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: -2px;
 }
 
 .big .over {
