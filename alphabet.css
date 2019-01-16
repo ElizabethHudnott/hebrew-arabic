@@ -166,7 +166,7 @@ table {
 
 .table td, .table th {
 	border: 1px solid #444444;
-	padding: 3px 5px 3px 5px;
+	padding: 3px 7px;
 	text-align: center;
 }
 
@@ -180,6 +180,7 @@ table {
 
 .hebrew-char {
 	font-size: 260%;
+	line-height: 1.6;
 }
 
 .english-char {
