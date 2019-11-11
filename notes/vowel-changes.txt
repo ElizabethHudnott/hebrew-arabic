@@ -1,0 +1,28 @@
+Tonic (T), Pretonic (PT), Propretonic (PPT)
+
+PPT (afterwards):
+	Kamatz or tsere -> shvā
+
+PT (afterwards):
+	-> shvā
+
+Segolate nouns
+	X + segol and stress on 1st syllable -> shvā + kamatz
+	(X = segol, tsere, holam)
+	(PS a -> e, i -> ē, u -> ō)
+
+	patach + P(patach) -> shvā + kamatz
+	X + patach + P -> shvā + kamatz
+
+	(P = ayin or chet, i.e. pharyngeal)
+
+
+gutterals can't take a shvā so have a hataf vowel (compound shvā) instead.
+
+monosyllabic nouns
+	short vowel -> dagesh in plural
+
+preposition min (from, some)
+	מִן־ or מִ + dagesh
+	gutturals: no dagesh, tsere instead is hiriq
+	not merged with הָ
