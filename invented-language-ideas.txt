@@ -1,4 +1,17 @@
+Pronouns
+			Bright	Dark
+	1p sg.	X		X
+	2p sg.	X		X
+	2p pl.	X		X
+	3p sg.	X		X
+	3p pl.	X		X
+
 Germanic Words
 	dat (that, from Dutch)
 	dies (this, from German)
 	guut (good)
+
+Change of word order indicates topic
+Pro-drop based on verb conjugation
+https://en.wikipedia.org/wiki/Zero_copula#Arabic
+https://en.wikipedia.org/wiki/Topic_and_comment#In_other_languages
